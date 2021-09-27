@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08B39CAC27020CEC00EF9482 /* GXSTaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B39CAB27020CEC00EF9482 /* GXSTaskTableViewCell.m */; };
 		1C0A9BBB27005FFB00B7F49C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A9BBA27005FFB00B7F49C /* AppDelegate.m */; };
 		1C0A9BC427005FFB00B7F49C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A9BC227005FFB00B7F49C /* Main.storyboard */; };
 		1C0A9BC627005FFE00B7F49C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A9BC527005FFE00B7F49C /* Assets.xcassets */; };
@@ -425,6 +426,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08B39CAA27020CEC00EF9482 /* GXSTaskTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSTaskTableViewCell.h; sourceTree = "<group>"; };
+		08B39CAB27020CEC00EF9482 /* GXSTaskTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSTaskTableViewCell.m; sourceTree = "<group>"; };
 		1C0A9BB627005FFB00B7F49C /* GXSShengTaiYunProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GXSShengTaiYunProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C0A9BB927005FFB00B7F49C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1C0A9BBA27005FFB00B7F49C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1277,6 +1280,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08B39CA927020C9900EF9482 /* TaskView */ = {
+			isa = PBXGroup;
+			children = (
+				08B39CAA27020CEC00EF9482 /* GXSTaskTableViewCell.h */,
+				08B39CAB27020CEC00EF9482 /* GXSTaskTableViewCell.m */,
+			);
+			path = TaskView;
+			sourceTree = "<group>";
+		};
+		08B39CB327020D0D00EF9482 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				1CD9C4302701CD6E00E418E1 /* FLExtern.h */,
+				1CD9C42F2701CD6E00E418E1 /* FLExtern.m */,
+				1CD9C42B2701C99700E418E1 /* GXSUser.h */,
+				1CD9C42A2701C99600E418E1 /* GXSUser.m */,
+				1CD9C4272701C99600E418E1 /* GXSConfiguration.h */,
+				1CD9C4282701C99600E418E1 /* GXSConfiguration.m */,
+			);
+			path = UserModel;
+			sourceTree = "<group>";
+		};
+		08B39CB427020D2700EF9482 /* TaskModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TaskModel;
+			sourceTree = "<group>";
+		};
 		1C0A9BAD27005FFB00B7F49C = {
 			isa = PBXGroup;
 			children = (
@@ -1359,12 +1391,8 @@
 		1C0A9BF12700627100B7F49C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1CD9C4302701CD6E00E418E1 /* FLExtern.h */,
-				1CD9C42F2701CD6E00E418E1 /* FLExtern.m */,
-				1CD9C42B2701C99700E418E1 /* GXSUser.h */,
-				1CD9C42A2701C99600E418E1 /* GXSUser.m */,
-				1CD9C4272701C99600E418E1 /* GXSConfiguration.h */,
-				1CD9C4282701C99600E418E1 /* GXSConfiguration.m */,
+				08B39CB427020D2700EF9482 /* TaskModel */,
+				08B39CB327020D0D00EF9482 /* UserModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1372,6 +1400,7 @@
 		1C0A9BF22700627400B7F49C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				08B39CA927020C9900EF9482 /* TaskView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3352,6 +3381,7 @@
 				1C0A9F61270063A400B7F49C /* AVAssetTrack+MNExportMetadata.m in Sources */,
 				1C0AA013270063A500B7F49C /* MNAssetScrollView.m in Sources */,
 				1C0A9F79270063A500B7F49C /* MNURLResponse.m in Sources */,
+				08B39CAC27020CEC00EF9482 /* GXSTaskTableViewCell.m in Sources */,
 				1C0AA023270063A500B7F49C /* UIImageView+MNHelper.m in Sources */,
 				1C0AA045270063A500B7F49C /* WKWebView+MNHelper.m in Sources */,
 				1C0A9F9F270063A500B7F49C /* MNEmojiPacketCell.m in Sources */,

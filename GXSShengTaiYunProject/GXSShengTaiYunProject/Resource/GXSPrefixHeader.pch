@@ -18,7 +18,7 @@
 
 
 /// 主题颜色
-#define GXS_THEME_COLOR     MN_R_G_B(94.f, 72.f, 250.f)
+#define GXS_THEME_COLOR     MN_R_G_B(68.f, 157.f, 89.f)
 /// 灰色
 #define PAGE_COLOR          MN_RGB(160.f)
 /// 十六进制颜色 Hex

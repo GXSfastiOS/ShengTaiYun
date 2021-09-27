@@ -5,7 +5,10 @@
 //  Created by fenglikejiInfomation on 2021/9/26.
 //
 
+static NSString *cellId=@"TaskcellID";
+
 #import "GXSTaskViewController.h"
+#import "GXSTaskTableViewCell.h"
 
 @interface GXSTaskViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
@@ -71,11 +74,12 @@
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.dataArray.count;
+//    return self.dataArray.count;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@""];
+    GXSTaskTableViewCell *cell=[[GXSTaskTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     
     return  cell;
 }
@@ -92,7 +96,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60.f;
+    return 134.5f;
 }
 
 
@@ -100,12 +104,13 @@
 
 -(UITableView *)tableView{
     if (!_tableView) {
-        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0.f, 120.f, MN_SCREEN_WIDTH, self.view.height_mn-120.f) style:UITableViewStylePlain];
+        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0.f, 120.f, MN_SCREEN_WIDTH, self.contentView.bottom_mn-120.f) style:UITableViewStylePlain];
         _tableView.delegate               =self;
         _tableView.dataSource             =self;
         _tableView.tableFooterView        = [[UIView alloc]init];
         _tableView.backgroundColor        =UIColor.blackColor;
-        _tableView.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
+        _tableView.separatorStyle         =UITableViewCellSeparatorStyleSingleLine;
+        [_tableView registerClass:[GXSTaskTableViewCell class] forCellReuseIdentifier:cellId];
     }
     return  _tableView;
 }
