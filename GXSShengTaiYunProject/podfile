@@ -9,5 +9,6 @@ pod 'JXCategoryView', '~> 1.5.5' #https://github.com/pujiaxin33/JXCategoryView
 pod 'YYModel', '~> 1.0.4' #https://github.com/ibireme/YYModel
 pod 'IQKeyboardManager'
 pod 'DZNEmptyDataSet'
+pod 'SDWebImage'
 
 end

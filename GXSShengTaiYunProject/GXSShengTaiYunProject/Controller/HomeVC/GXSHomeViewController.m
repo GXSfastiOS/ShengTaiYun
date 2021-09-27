@@ -16,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor=UIColor.redColor;
+
 }
 
 
@@ -29,13 +29,13 @@
     return @"首页";
 }
 
-- (UIImage *)tabBarItemImage {
-    return @"tab_dynamic".image;
-}
-
-- (UIImage *)tabBarItemSelectedImage {
-    return @"tab_dynamic_selected".image;
-}
+//- (UIImage *)tabBarItemImage {
+//    return @"tab_dynamic".image;
+//}
+//
+//- (UIImage *)tabBarItemSelectedImage {
+//    return @"tab_dynamic_selected".image;
+//}
 
 - (MNContentEdges)contentEdges {
     return MNContentEdgeNone;

@@ -10,5 +10,22 @@
 
 //导入框架需要配置的
 #import "MNKit.h"
+#import "GXSHTTPDataRequest.h"
+#import "FLExtern.h"
+#import "GXSUser.h"
+#import "GXSConfiguration.h"
+
+
+
+/// 主题颜色
+#define GXS_THEME_COLOR     MN_R_G_B(94.f, 72.f, 250.f)
+/// 灰色
+#define PAGE_COLOR          MN_RGB(160.f)
+/// 十六进制颜色 Hex
+#define ssRGBHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+/// 网址拼接
+#define URL_HANDING(name)  [GXSConfiguration.configuration handUrl:name]
+/// 请求令牌
+#define ACCESS_TOKEN    [[GXSConfiguration configuration] access_token]
 
 #endif /* GXSPrefixHeader_pch */

@@ -81,4 +81,9 @@ typedef NS_ENUM(NSInteger, MNTabBadgeAlignment) {
  */
 @property (nonatomic, copy) NSString *badgeValue;
 
+/**
+ 其他样式
+ */
+@property (nonatomic, assign) BOOL otherViewStyte;
+
 @end

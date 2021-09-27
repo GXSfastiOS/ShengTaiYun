@@ -6,13 +6,15 @@
 //
 
 #import "AppDelegate.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
 #import "GXSHomeViewController.h"
 #import "GXSTaskViewController.h"
 #import "GXSMineViewController.h"
 #import "MNTabBarController.h"
+#import "GXSTabBarViewController.h"
 
 @interface AppDelegate ()
-@property (nonatomic,strong) MNTabBarController *tabBarController;
+@property (nonatomic,strong) GXSTabBarViewController *tabBarController;
 @end
 
 @implementation AppDelegate
@@ -23,6 +25,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor clearColor];
     [self.window makeKeyAndVisible];
+    [[IQKeyboardManager sharedManager] setEnableAutoToolbar:YES];
     //加载启动图
 //    UIStoryboard *launchScreenStory = [UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil];
 //    UIViewController *startControll = [launchScreenStory instantiateViewControllerWithIdentifier:@"GXSLaunchView"];
@@ -40,9 +43,9 @@
 
 #pragma mark -lazy
 
-- (MNTabBarController *)tabBarController{
+- (GXSTabBarViewController *)tabBarController{
     if (!_tabBarController) {
-        _tabBarController=[[MNTabBarController alloc]init];
+        _tabBarController=GXSTabBarViewController.tabBarController;
         _tabBarController.controllers=@[@"GXSHomeViewController",@"GXSTaskViewController",@"GXSMineViewController"];
     }
     return  _tabBarController;

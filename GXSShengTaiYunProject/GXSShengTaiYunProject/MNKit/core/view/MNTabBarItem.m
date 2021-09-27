@@ -13,6 +13,7 @@
 @property (nonatomic, weak) UILabel *badgeLabel;
 @property (nonatomic, weak) UIView *contentView;
 @property (nonatomic, weak) UIImageView *imageView;
+@property (nonatomic, weak) UIView *bottomView;
 @end
 
 @implementation MNTabBarItem
@@ -38,7 +39,7 @@
     _imageEdgeInsets = UIEdgeInsetsZero;
     _titleEdgeInsets = UIEdgeInsetsZero;
     _titleColor = [UIColor darkTextColor];
-    _selectedTitleColor = [UIColor colorWithRed:0.f/255.f green:122.f/255.f blue:254.f/255.f alpha:1.f];
+    _selectedTitleColor = GXS_THEME_COLOR;
 }
 
 - (void)createView {
@@ -62,6 +63,10 @@
     titleLabel.font = [UIFont systemFontOfSize:11.5f];
     [contentView addSubview:titleLabel];
     self.titleLabel = titleLabel;
+    
+    UIView *bottomView=[[UIView alloc]initWithFrame:CGRectZero];
+    [contentView addSubview:bottomView];
+    self.bottomView=bottomView;
     
     UILabel *badgeLabel = [UILabel new];
     badgeLabel.userInteractionEnabled = NO;
@@ -87,20 +92,39 @@
     CGFloat size = MIN(width, height);
     CGFloat max = size + interval + _titleLabel.font.pointSize;
     
-    imageRect = CGRectMake((self.contentView.width_mn - size)/2.f, (self.contentView.height_mn - max)/2.f, size, size);
-    
-    titleRect = CGRectMake(0.f, CGRectGetMaxY(imageRect) + interval, self.contentView.width_mn, self.titleFont.pointSize);
-    
-    if (!UIEdgeInsetsEqualToEdgeInsets(self.imageEdgeInsets, UIEdgeInsetsZero)) {
-        imageRect = UIEdgeInsetsInsetRect(self.contentView.bounds, self.imageEdgeInsets);
+    if (self.otherViewStyte) {
+        imageRect = CGRectZero;
+        
+        titleRect = CGRectMake(0.f, (self.contentView.height_mn-_titleLabel.font.pointSize)/2, self.contentView.width_mn, self.titleFont.pointSize);
+        
+        self.bottomView.frame=CGRectMake(0.f, titleRect.size.height+20,titleRect.size.width-34, 5);
+        
+        if (!UIEdgeInsetsEqualToEdgeInsets(self.imageEdgeInsets, UIEdgeInsetsZero)) {
+            imageRect = UIEdgeInsetsInsetRect(self.contentView.bounds, self.imageEdgeInsets);
+        }
+        
+        if (!UIEdgeInsetsEqualToEdgeInsets(self.titleEdgeInsets, UIEdgeInsetsZero)) {
+            titleRect = UIEdgeInsetsInsetRect(self.contentView.bounds, self.titleEdgeInsets);
+        }
+    }else{
+        imageRect = CGRectMake((self.contentView.width_mn - size)/2.f, (self.contentView.height_mn - max)/2.f, size, size);
+        
+        titleRect = CGRectMake(0.f, CGRectGetMaxY(imageRect) + interval, self.contentView.width_mn, self.titleFont.pointSize);
+        
+        if (!UIEdgeInsetsEqualToEdgeInsets(self.imageEdgeInsets, UIEdgeInsetsZero)) {
+            imageRect = UIEdgeInsetsInsetRect(self.contentView.bounds, self.imageEdgeInsets);
+        }
+        
+        if (!UIEdgeInsetsEqualToEdgeInsets(self.titleEdgeInsets, UIEdgeInsetsZero)) {
+            titleRect = UIEdgeInsetsInsetRect(self.contentView.bounds, self.titleEdgeInsets);
+        }
     }
     
-    if (!UIEdgeInsetsEqualToEdgeInsets(self.titleEdgeInsets, UIEdgeInsetsZero)) {
-        titleRect = UIEdgeInsetsInsetRect(self.contentView.bounds, self.titleEdgeInsets);
-    }
+   
 
     _imageView.frame = imageRect;
     _titleLabel.frame = titleRect;
+    _bottomView.centerX_mn=_titleLabel.centerX_mn;
     _badgeLabel.height_mn = _badgeLabel.font.lineHeight;
     _badgeLabel.layer.cornerRadius = _badgeLabel.height_mn/2.f;
     [self updateBadgeIfNeeded];
@@ -129,10 +153,13 @@
     if (selected) {
         self.titleLabel.text = self.selectedTitle;
         self.titleLabel.textColor = self.selectedTitleColor;
+        self.bottomView.hidden=NO;
+        self.bottomView.backgroundColor=self.selectedTitleColor;
         self.imageView.image = self.selectedImage;
     } else {
         self.titleLabel.text = self.title;
         self.titleLabel.textColor = self.titleColor;
+        self.bottomView.hidden=YES;
         self.imageView.image = self.image;
     }
 }

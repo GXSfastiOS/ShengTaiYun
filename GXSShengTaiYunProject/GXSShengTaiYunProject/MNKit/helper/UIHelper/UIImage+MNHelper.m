@@ -144,7 +144,7 @@ UIColor * UIColorAtImagePoint (UIImage *image, CGPoint point) {
             image = [UIImage imageWithContentsOfFile:(NSString *)obj];
         } else if ([(NSString *)obj hasPrefix:@"http://"] || [(NSString *)obj hasPrefix:@"https://"]) {
 #if __has_include("SDWebImageManager.h") || __has_include(<SDWebImage/SDWebImageManager.h>)
-            image = [SDWebImageManager.sharedManager.imageCache imageFromCacheForKey:nil];
+//            image = [SDWebImageManager.sharedManager.imageCache imageFromCacheForKey:nil];
 #endif
             if (!image) {
                 NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:(NSString *)obj]];

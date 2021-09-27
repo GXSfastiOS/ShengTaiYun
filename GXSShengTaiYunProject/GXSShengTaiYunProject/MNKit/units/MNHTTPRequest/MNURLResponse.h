@@ -23,6 +23,8 @@ typedef NS_ENUM(NSInteger, MNURLResponseCode) {
     MNURLResponseCodeCannotConnectHost = -1004,
     MNURLResponseCodeNotConnectToInternet = -1009,
     MNURLResponseCodeCannotWriteToFile = -3003,
+    MNURLResponseCodeAccessTokenFailure = 103, /// token 失效
+    MNURLResponseCodeUserTokenFailure = 201,   /// 用户token失效
     MNURLResponseCodeNeedLogin = 401, ///需要重新登录
     MNURLResponseCodeNeedVIP = 409,///需要充值会员
     MNURLResponseCodePictureCodeError = 102    /// 图片验证码错误

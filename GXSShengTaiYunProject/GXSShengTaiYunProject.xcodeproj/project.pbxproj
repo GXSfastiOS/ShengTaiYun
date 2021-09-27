@@ -399,6 +399,11 @@
 		1C0AA0C6270075DE00B7F49C /* GXSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0AA0C5270075DE00B7F49C /* GXSHomeViewController.m */; };
 		1C0AA0C92700765A00B7F49C /* GXSTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0AA0C82700765A00B7F49C /* GXSTaskViewController.m */; };
 		1C0AA0CC270076D100B7F49C /* GXSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0AA0CB270076D100B7F49C /* GXSMineViewController.m */; };
+		1C3EC16227016597000C8845 /* GXSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3EC16127016597000C8845 /* GXSTabBarViewController.m */; };
+		1CD9C4252701C97300E418E1 /* GXSHTTPDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C4232701C97300E418E1 /* GXSHTTPDataRequest.m */; };
+		1CD9C42C2701C99700E418E1 /* GXSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C4282701C99600E418E1 /* GXSConfiguration.m */; };
+		1CD9C42E2701C99700E418E1 /* GXSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C42A2701C99600E418E1 /* GXSUser.m */; };
+		1CD9C4312701CD6E00E418E1 /* FLExtern.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C42F2701CD6E00E418E1 /* FLExtern.m */; };
 		BC75AB25814AA4F16AD81A26 /* Pods_GXSShengTaiYunProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6823FC11A80C47C8DC205FE7 /* Pods_GXSShengTaiYunProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -1169,6 +1174,16 @@
 		1C0AA0C82700765A00B7F49C /* GXSTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSTaskViewController.m; sourceTree = "<group>"; };
 		1C0AA0CA270076D100B7F49C /* GXSMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSMineViewController.h; sourceTree = "<group>"; };
 		1C0AA0CB270076D100B7F49C /* GXSMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSMineViewController.m; sourceTree = "<group>"; };
+		1C3EC16027016597000C8845 /* GXSTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSTabBarViewController.h; sourceTree = "<group>"; };
+		1C3EC16127016597000C8845 /* GXSTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSTabBarViewController.m; sourceTree = "<group>"; };
+		1CD9C4232701C97300E418E1 /* GXSHTTPDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXSHTTPDataRequest.m; sourceTree = "<group>"; };
+		1CD9C4242701C97300E418E1 /* GXSHTTPDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSHTTPDataRequest.h; sourceTree = "<group>"; };
+		1CD9C4272701C99600E418E1 /* GXSConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSConfiguration.h; sourceTree = "<group>"; };
+		1CD9C4282701C99600E418E1 /* GXSConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXSConfiguration.m; sourceTree = "<group>"; };
+		1CD9C42A2701C99600E418E1 /* GXSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXSUser.m; sourceTree = "<group>"; };
+		1CD9C42B2701C99700E418E1 /* GXSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSUser.h; sourceTree = "<group>"; };
+		1CD9C42F2701CD6E00E418E1 /* FLExtern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLExtern.m; sourceTree = "<group>"; };
+		1CD9C4302701CD6E00E418E1 /* FLExtern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLExtern.h; sourceTree = "<group>"; };
 		491CA2546BB1478C316D110A /* Pods-GXSShengTaiYunProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GXSShengTaiYunProject.debug.xcconfig"; path = "Target Support Files/Pods-GXSShengTaiYunProject/Pods-GXSShengTaiYunProject.debug.xcconfig"; sourceTree = "<group>"; };
 		6823FC11A80C47C8DC205FE7 /* Pods_GXSShengTaiYunProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GXSShengTaiYunProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFEE66F22FD720853C388B2 /* Pods-GXSShengTaiYunProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GXSShengTaiYunProject.release.xcconfig"; path = "Target Support Files/Pods-GXSShengTaiYunProject/Pods-GXSShengTaiYunProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -1291,6 +1306,7 @@
 				1C0A9BF32700627900B7F49C /* Controller */,
 				1C0A9BF22700627400B7F49C /* View */,
 				1C0A9BF12700627100B7F49C /* Model */,
+				1CD9C4222701C8C600E418E1 /* Request */,
 				1C0A9BF4270062D500B7F49C /* Vender */,
 				1C0A9BF02700626C00B7F49C /* Resource */,
 				1C0A9BF8270063A200B7F49C /* MNKit */,
@@ -1321,6 +1337,8 @@
 			children = (
 				1C0A9BB927005FFB00B7F49C /* AppDelegate.h */,
 				1C0A9BBA27005FFB00B7F49C /* AppDelegate.m */,
+				1C3EC16027016597000C8845 /* GXSTabBarViewController.h */,
+				1C3EC16127016597000C8845 /* GXSTabBarViewController.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1341,6 +1359,12 @@
 		1C0A9BF12700627100B7F49C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1CD9C4302701CD6E00E418E1 /* FLExtern.h */,
+				1CD9C42F2701CD6E00E418E1 /* FLExtern.m */,
+				1CD9C42B2701C99700E418E1 /* GXSUser.h */,
+				1CD9C42A2701C99600E418E1 /* GXSUser.m */,
+				1CD9C4272701C99600E418E1 /* GXSConfiguration.h */,
+				1CD9C4282701C99600E418E1 /* GXSConfiguration.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3067,6 +3091,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1CD9C4222701C8C600E418E1 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				1CD9C4242701C97300E418E1 /* GXSHTTPDataRequest.h */,
+				1CD9C4232701C97300E418E1 /* GXSHTTPDataRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		2D02E2218E28E43CD7E754D4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -3267,6 +3300,7 @@
 				1C0AA039270063A500B7F49C /* UIViewController+MNHelper.m in Sources */,
 				1C0A9FB6270063A500B7F49C /* MNCollectionVerticalLayout.m in Sources */,
 				1C0A9F64270063A400B7F49C /* MNQRGenerator.m in Sources */,
+				1CD9C42C2701C99700E418E1 /* GXSConfiguration.m in Sources */,
 				1C0AA09F270063A500B7F49C /* MJRefreshBackStateFooter.m in Sources */,
 				1C0AA030270063A500B7F49C /* UIView+MNHelper.m in Sources */,
 				1C0A9FCF270063A500B7F49C /* MN3DMenuTransitionAnimator.m in Sources */,
@@ -3330,6 +3364,8 @@
 				1C0A9F3E270063A400B7F49C /* MNBaseViewController.m in Sources */,
 				1C0AA02D270063A500B7F49C /* UIScreen+MNHelper.m in Sources */,
 				1C0A9F68270063A400B7F49C /* MNAuthenticator.m in Sources */,
+				1CD9C4252701C97300E418E1 /* GXSHTTPDataRequest.m in Sources */,
+				1C3EC16227016597000C8845 /* GXSTabBarViewController.m in Sources */,
 				1C0AA05B270063A500B7F49C /* NSAttributedString+MNHelper.m in Sources */,
 				1C0A9F96270063A500B7F49C /* MNSegmentViewController.m in Sources */,
 				1C0A9F87270063A500B7F49C /* MNNetworkReachability.m in Sources */,
@@ -3517,6 +3553,7 @@
 				1C0AA03E270063A500B7F49C /* UIWindow+MNHelper.m in Sources */,
 				1C0A9F76270063A500B7F49C /* MNLivePhoto.m in Sources */,
 				1C0A9FA8270063A500B7F49C /* MNEmojiElementView.m in Sources */,
+				1CD9C4312701CD6E00E418E1 /* FLExtern.m in Sources */,
 				1C0A9FD5270063A500B7F49C /* MNSwitch.m in Sources */,
 				1C0AA02B270063A500B7F49C /* UIResponder+MNHelper.m in Sources */,
 				1C0A9F6C270063A400B7F49C /* MNKVStorage.m in Sources */,
@@ -3555,6 +3592,7 @@
 				1C0AA01E270063A500B7F49C /* MNContext.m in Sources */,
 				1C0AA05A270063A500B7F49C /* NSUserDefaults+MNSafely.m in Sources */,
 				1C0AA0C6270075DE00B7F49C /* GXSHomeViewController.m in Sources */,
+				1CD9C42E2701C99700E418E1 /* GXSUser.m in Sources */,
 				1C0AA014270063A500B7F49C /* MNAssetBrowser.m in Sources */,
 				1C0A9FB8270063A500B7F49C /* MNCardView.m in Sources */,
 				1C0A9F8A270063A500B7F49C /* MNURLResponseSerializer.m in Sources */,
@@ -3747,13 +3785,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K58GCK5CZM;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GXSShengTaiYunProject/MNKit/vendor/FFmpeg",
 				);
-				GCC_PREFIX_HEADER = /Users/zhaoying/Desktop/fengliProject/GXSShengTaiYunProject/GXSShengTaiYunProject/Resource/GXSPrefixHeader.pch;
-				INFOPLIST_FILE = /Users/zhaoying/Desktop/fengliProject/GXSShengTaiYunProject/GXSShengTaiYunProject/Resource/Info.plist;
+				GCC_PREFIX_HEADER = GXSShengTaiYunProject/Resource/GXSPrefixHeader.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager/IQKeyboardManager.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/JXCategoryView/JXCategoryView.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers\"",
+				);
+				INFOPLIST_FILE = GXSShengTaiYunProject/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3768,6 +3816,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = GXSShengTaiYun.GXSShengTaiYunProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 			};
 			name = Debug;
 		};
@@ -3778,13 +3827,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K58GCK5CZM;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GXSShengTaiYunProject/MNKit/vendor/FFmpeg",
 				);
-				GCC_PREFIX_HEADER = /Users/zhaoying/Desktop/fengliProject/GXSShengTaiYunProject/GXSShengTaiYunProject/Resource/GXSPrefixHeader.pch;
-				INFOPLIST_FILE = /Users/zhaoying/Desktop/fengliProject/GXSShengTaiYunProject/GXSShengTaiYunProject/Resource/Info.plist;
+				GCC_PREFIX_HEADER = GXSShengTaiYunProject/Resource/GXSPrefixHeader.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager/IQKeyboardManager.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/JXCategoryView/JXCategoryView.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers\"",
+				);
+				INFOPLIST_FILE = GXSShengTaiYunProject/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3799,6 +3858,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = GXSShengTaiYun.GXSShengTaiYunProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 			};
 			name = Release;
 		};
