@@ -1,0 +1,14 @@
+//
+//  GXSPrefixHeader.pch
+//  GXSShengTaiYunProject
+//
+//  Created by fenglikejiInfomation on 2021/9/26.
+//
+
+#ifndef GXSPrefixHeader_pch
+#define GXSPrefixHeader_pch
+
+//导入框架需要配置的
+#import "MNKit.h"
+
+#endif /* GXSPrefixHeader_pch */
