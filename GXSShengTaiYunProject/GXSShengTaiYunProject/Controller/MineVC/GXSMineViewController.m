@@ -202,13 +202,6 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
     return @"我的";
 }
 
-//- (UIImage *)tabBarItemImage {
-//    return @"tab_mine".image;
-//}
-
-//- (UIImage *)tabBarItemSelectedImage {
-//    return @"tab_mine_selected".image;
-//}
 
 
 @end

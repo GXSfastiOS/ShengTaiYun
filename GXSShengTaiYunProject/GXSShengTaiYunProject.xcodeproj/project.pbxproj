@@ -400,6 +400,9 @@
 		1C0AA0C6270075DE00B7F49C /* GXSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0AA0C5270075DE00B7F49C /* GXSHomeViewController.m */; };
 		1C0AA0C92700765A00B7F49C /* GXSTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0AA0C82700765A00B7F49C /* GXSTaskViewController.m */; };
 		1C0AA0CC270076D100B7F49C /* GXSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0AA0CB270076D100B7F49C /* GXSMineViewController.m */; };
+		1C1A660E2702A2E800E20892 /* TaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A660D2702A2E800E20892 /* TaskModel.m */; };
+		1C1A661127032FDA00E20892 /* GXSGonggaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A661027032FDA00E20892 /* GXSGonggaoViewController.m */; };
+		1C1A66152703331100E20892 /* GXSGonggaoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A66142703331100E20892 /* GXSGonggaoTableViewCell.m */; };
 		1C3EC16227016597000C8845 /* GXSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3EC16127016597000C8845 /* GXSTabBarViewController.m */; };
 		1CD9C4252701C97300E418E1 /* GXSHTTPDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C4232701C97300E418E1 /* GXSHTTPDataRequest.m */; };
 		1CD9C42C2701C99700E418E1 /* GXSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C4282701C99600E418E1 /* GXSConfiguration.m */; };
@@ -1177,6 +1180,12 @@
 		1C0AA0C82700765A00B7F49C /* GXSTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSTaskViewController.m; sourceTree = "<group>"; };
 		1C0AA0CA270076D100B7F49C /* GXSMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSMineViewController.h; sourceTree = "<group>"; };
 		1C0AA0CB270076D100B7F49C /* GXSMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSMineViewController.m; sourceTree = "<group>"; };
+		1C1A660C2702A2E800E20892 /* TaskModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TaskModel.h; path = GXSShengTaiYunProject/AppDelegate/TaskModel.h; sourceTree = SOURCE_ROOT; };
+		1C1A660D2702A2E800E20892 /* TaskModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TaskModel.m; path = GXSShengTaiYunProject/AppDelegate/TaskModel.m; sourceTree = SOURCE_ROOT; };
+		1C1A660F27032FDA00E20892 /* GXSGonggaoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSGonggaoViewController.h; sourceTree = "<group>"; };
+		1C1A661027032FDA00E20892 /* GXSGonggaoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSGonggaoViewController.m; sourceTree = "<group>"; };
+		1C1A66132703331100E20892 /* GXSGonggaoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSGonggaoTableViewCell.h; sourceTree = "<group>"; };
+		1C1A66142703331100E20892 /* GXSGonggaoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSGonggaoTableViewCell.m; sourceTree = "<group>"; };
 		1C3EC16027016597000C8845 /* GXSTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSTabBarViewController.h; sourceTree = "<group>"; };
 		1C3EC16127016597000C8845 /* GXSTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSTabBarViewController.m; sourceTree = "<group>"; };
 		1CD9C4232701C97300E418E1 /* GXSHTTPDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXSHTTPDataRequest.m; sourceTree = "<group>"; };
@@ -1305,6 +1314,8 @@
 		08B39CB427020D2700EF9482 /* TaskModel */ = {
 			isa = PBXGroup;
 			children = (
+				1C1A660C2702A2E800E20892 /* TaskModel.h */,
+				1C1A660D2702A2E800E20892 /* TaskModel.m */,
 			);
 			path = TaskModel;
 			sourceTree = "<group>";
@@ -1400,6 +1411,7 @@
 		1C0A9BF22700627400B7F49C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1C1A6612270332D600E20892 /* HomeView */,
 				08B39CA927020C9900EF9482 /* TaskView */,
 			);
 			path = View;
@@ -1445,6 +1457,8 @@
 			children = (
 				1C0AA0C4270075DE00B7F49C /* GXSHomeViewController.h */,
 				1C0AA0C5270075DE00B7F49C /* GXSHomeViewController.m */,
+				1C1A660F27032FDA00E20892 /* GXSGonggaoViewController.h */,
+				1C1A661027032FDA00E20892 /* GXSGonggaoViewController.m */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -3120,6 +3134,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1C1A6612270332D600E20892 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				1C1A66132703331100E20892 /* GXSGonggaoTableViewCell.h */,
+				1C1A66142703331100E20892 /* GXSGonggaoTableViewCell.m */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		1CD9C4222701C8C600E418E1 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -3349,6 +3372,7 @@
 				1C0A9FA6270063A500B7F49C /* MNEmojiPreview.m in Sources */,
 				1C0A9F43270063A400B7F49C /* MNWebUserContentController.m in Sources */,
 				1C0AA0AB270063A500B7F49C /* MJRefreshComponent.m in Sources */,
+				1C1A66152703331100E20892 /* GXSGonggaoTableViewCell.m in Sources */,
 				1C0AA0A7270063A500B7F49C /* MJRefreshFooter.m in Sources */,
 				1C0AA028270063A500B7F49C /* UITableView+MNHelper.m in Sources */,
 				1C0A9F5F270063A400B7F49C /* MNAssetExporter+MNExportSession.m in Sources */,
@@ -3509,6 +3533,7 @@
 				1C0AA053270063A500B7F49C /* NSString+MNHelper.m in Sources */,
 				1C0A9FC4270063A500B7F49C /* MNLinkTableViewCell.m in Sources */,
 				1C0A9FCA270063A500B7F49C /* MNPushModalTransitionAnimator.m in Sources */,
+				1C1A660E2702A2E800E20892 /* TaskModel.m in Sources */,
 				1C0A9FEC270063A500B7F49C /* MNCompleteDialog.m in Sources */,
 				1C0A9FB2270063A500B7F49C /* MNGridView.m in Sources */,
 				1C0A9F69270063A400B7F49C /* MNDiskCache.m in Sources */,
@@ -3574,6 +3599,7 @@
 				1C0A9FEA270063A500B7F49C /* MNActivityDialog.m in Sources */,
 				1C0A9F9B270063A500B7F49C /* MNRefreshNormalHeader.m in Sources */,
 				1C0A9BCC27005FFE00B7F49C /* main.m in Sources */,
+				1C1A661127032FDA00E20892 /* GXSGonggaoViewController.m in Sources */,
 				1C0A9FB7270063A500B7F49C /* MNCollectionHorizontalLayout.m in Sources */,
 				1C0A9FBF270063A500B7F49C /* MNLinkPageView.m in Sources */,
 				1C0A9F5B270063A400B7F49C /* MNLocalEvaluation.m in Sources */,

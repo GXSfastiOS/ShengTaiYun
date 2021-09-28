@@ -10,7 +10,7 @@ static NSString *cellId=@"TaskcellID";
 #import "GXSTaskViewController.h"
 #import "GXSTaskTableViewCell.h"
 
-@interface GXSTaskViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface GXSTaskViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) UIButton *nowTaskBtn;
 @property (nonatomic,strong) UIButton *historyTaskBtn;
@@ -33,7 +33,7 @@ static NSString *cellId=@"TaskcellID";
     UIView *btnView=[[UIView alloc]initWithFrame:CGRectMake((MN_SCREEN_WIDTH-201.f)/2, 80.f, 201.f, 40.f)];
     [self.contentView addSubview:btnView];
     
-    UIView *lineView=[[UIView alloc]initWithFrame:CGRectMake(100.f, 5.f, 1.f, 30.f)];
+    UIView *lineView=[[UIView alloc]initWithFrame:CGRectMake(100.f, 10.f, 1.f, 20.f)];
     lineView.backgroundColor=UIColor.grayColor;
     [btnView addSubview:lineView];
     
@@ -52,7 +52,25 @@ static NSString *cellId=@"TaskcellID";
 
     //tableView
     [self.contentView addSubview:self.tableView];
-//    UISearchBar
+    //搜索
+    UIView *searchView=[[UIView alloc]initWithFrame:CGRectMake(0.f, btnView.bottom_mn, self.contentView.width_mn, 44.f)];
+    UISearchBar *searchBar=[[UISearchBar alloc]initWithFrame:searchView.frame];
+    searchBar.placeholder=@"可输入编号搜索";
+    searchBar.delegate=self;
+    searchBar.backgroundColor=UIColor.whiteColor;
+    UIImageView *barImageView = [[[searchBar.subviews firstObject] subviews] firstObject];
+    barImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    barImageView.layer.borderWidth=1;
+    [searchView addSubview:searchBar];
+    [self.contentView addSubview:searchBar];
+    
+    //添加
+    UIButton *addTaskBtn=[UIButton buttonWithFrame:CGRectZero image:[UIImage imageNamed:@"addTask"] title:@"" titleColor:nil titleFont:nil];
+    addTaskBtn.size_mn=CGSizeMake(50.f, 50.f);
+    addTaskBtn.right_mn=self.contentView.right_mn-20.f;
+    addTaskBtn.bottom_mn=self.contentView.bottom_mn-100.f;
+    [addTaskBtn addTarget:self action:@selector(addTask) forControlEvents:UIControlEventTouchUpInside];
+    [self.contentView addSubview:addTaskBtn];
 }
 
 #pragma mark - event
@@ -69,6 +87,20 @@ static NSString *cellId=@"TaskcellID";
         self.historyTaskBtn.titleLabel.font=[UIFont systemFontOfSize:18.f];
         [self.historyTaskBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     }
+}
+
+- (void)addTask{
+    
+}
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+    
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
@@ -104,12 +136,11 @@ static NSString *cellId=@"TaskcellID";
 
 -(UITableView *)tableView{
     if (!_tableView) {
-        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0.f, 120.f, MN_SCREEN_WIDTH, self.contentView.bottom_mn-120.f) style:UITableViewStylePlain];
+        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0.f, 170.f, MN_SCREEN_WIDTH, self.contentView.bottom_mn-170.f) style:UITableViewStylePlain];
         _tableView.delegate               =self;
         _tableView.dataSource             =self;
         _tableView.tableFooterView        = [[UIView alloc]init];
-        _tableView.backgroundColor        =UIColor.blackColor;
-        _tableView.separatorStyle         =UITableViewCellSeparatorStyleSingleLine;
+        _tableView.separatorStyle         =UITableViewCellSeparatorStyleNone;
         [_tableView registerClass:[GXSTaskTableViewCell class] forCellReuseIdentifier:cellId];
     }
     return  _tableView;
@@ -124,14 +155,6 @@ static NSString *cellId=@"TaskcellID";
     return @"任务";
    
 }
-
-//- (UIImage *)tabBarItemImage {
-//    return @"tab_message".image;
-//}
-//
-//- (UIImage *)tabBarItemSelectedImage {
-//    return @"tab_message_selected".image;
-//}
 
 - (MNContentEdges)contentEdges {
     return MNContentEdgeBottom;
