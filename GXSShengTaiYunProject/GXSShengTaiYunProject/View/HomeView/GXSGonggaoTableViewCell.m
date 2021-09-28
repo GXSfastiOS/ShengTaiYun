@@ -62,4 +62,8 @@
     
 }
 
+- (void)setModel:(GXSGongGaoModel *)model{
+    
+}
+
 @end
