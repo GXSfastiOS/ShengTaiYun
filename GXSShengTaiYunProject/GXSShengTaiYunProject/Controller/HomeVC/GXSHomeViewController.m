@@ -7,6 +7,7 @@
 
 #import "GXSHomeViewController.h"
 #import "GXSGonggaoViewController.h"
+#import "GXSAllHuanJingViewController.h"
 
 @interface GXSHomeViewController ()
 //btnArray
@@ -116,7 +117,8 @@
     if (tag==100) {
         
     }else if(tag==101){
-        
+        GXSAllHuanJingViewController *huangjing=[[GXSAllHuanJingViewController alloc]init];
+        [self.navigationController pushViewController:huangjing animated:YES];
     }else if(tag==102){
         
     }else if(tag==103){

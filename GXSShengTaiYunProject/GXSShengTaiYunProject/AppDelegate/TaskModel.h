@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)NSString *reviewPreson;
 //分管领导
 @property (nonatomic,strong)NSString *fenGuanLingDao;
+//cell类型
+@property (nonatomic,assign)NSInteger type;
 
 @end
 

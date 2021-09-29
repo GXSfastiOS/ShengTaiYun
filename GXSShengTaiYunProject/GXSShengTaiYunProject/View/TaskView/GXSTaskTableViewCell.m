@@ -16,6 +16,8 @@
 @property (nonatomic,strong)UILabel *reviewPresonLab;
 //分管领导
 @property (nonatomic,strong)UILabel *fenGuanLingDaoLab;
+//签订时间
+@property (nonatomic,strong)UILabel *qiandingLab;
 @end
 
 @implementation GXSTaskTableViewCell
@@ -44,9 +46,14 @@
     [view addSubview:questionLab];
     self.questionIdLab=questionLab;
     
-    UILabel *fabuLab=[UILabel labelWithFrame:CGRectMake(image.left_mn, image.bottom_mn+10.f, view.width_mn-30.f, 15.f) text:@"发布时间：202102154561" alignment:NSTextAlignmentLeft textColor:UIColor.grayColor font:UIFontSystem(16)];
+    UILabel *fabuLab=[UILabel labelWithFrame:CGRectMake(image.left_mn, image.bottom_mn+10.f, view.width_mn/2, 15.f) text:@"发布时间：2021-10-13" alignment:NSTextAlignmentLeft textColor:UIColor.grayColor font:UIFontSystem(13)];
     [view addSubview:fabuLab];
     self.fubuTimeLab=fabuLab;
+    
+    UILabel *qiandingLab=[UILabel labelWithFrame:CGRectMake(fabuLab.right_mn+10.f, image.bottom_mn+10.f, view.width_mn/2, 15.f) text:@"签订时间：2021-10-13" alignment:NSTextAlignmentLeft textColor:UIColor.grayColor font:UIFontSystem(13)];
+    [view addSubview:qiandingLab];
+    qiandingLab.hidden=YES;
+    self.qiandingLab=qiandingLab;
     
     UILabel *reviewLab=[UILabel labelWithFrame:CGRectMake(image.left_mn, fabuLab.bottom_mn+10.f, view.width_mn-30.f, 15.f) text:@"核查人员：李四" alignment:NSTextAlignmentLeft textColor:UIColor.grayColor font:UIFontSystem(15)];
     [view addSubview:reviewLab];
@@ -70,7 +77,9 @@
 }
 
 - (void)setModel:(TaskModel *)model{
-    
+    if (model.type==1) {
+        self.qiandingLab.hidden=NO;
+    }
 }
 
 
