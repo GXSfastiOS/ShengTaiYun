@@ -8,6 +8,7 @@
 #import "GXSAllHuanJingViewController.h"
 #import "GXSTaskTableViewCell.h"
 #import "TaskModel.h"
+#import "GXSShaixuanAlertView.h"
 
 static NSString *cellId=@"huanjingCellID";
 
@@ -81,7 +82,8 @@ static NSString *cellId=@"huanjingCellID";
 }
 
 - (void)shaixuanClick{
-    
+    GXSShaixuanAlertView *alert=[[GXSShaixuanAlertView alloc]init];
+    [self.view addSubview:alert];
 }
 
 
