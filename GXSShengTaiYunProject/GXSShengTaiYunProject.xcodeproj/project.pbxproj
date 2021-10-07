@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		08B39CAC27020CEC00EF9482 /* GXSTaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B39CAB27020CEC00EF9482 /* GXSTaskTableViewCell.m */; };
 		08B39CBE2703581E00EF9482 /* GXSGongGaoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B39CBD2703581E00EF9482 /* GXSGongGaoModel.m */; };
+		08B39CD0270D807E00EF9482 /* GXSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B39CCF270D807E00EF9482 /* GXSLoginViewController.m */; };
+		08B39CD9270ECBE000EF9482 /* privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = 08B39CD7270ECBDF00EF9482 /* privacy.html */; };
+		08B39CDA270ECBE000EF9482 /* user.html in Resources */ = {isa = PBXBuildFile; fileRef = 08B39CD8270ECBE000EF9482 /* user.html */; };
+		08B39CE1270ED55F00EF9482 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B39CE0270ED55F00EF9482 /* RegisterView.m */; };
+		08B39CEA270ED57D00EF9482 /* ForGetPassworldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B39CE9270ED57D00EF9482 /* ForGetPassworldView.m */; };
 		1C0A9BBB27005FFB00B7F49C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A9BBA27005FFB00B7F49C /* AppDelegate.m */; };
 		1C0A9BC427005FFB00B7F49C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A9BC227005FFB00B7F49C /* Main.storyboard */; };
 		1C0A9BC627005FFE00B7F49C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A9BC527005FFE00B7F49C /* Assets.xcassets */; };
@@ -436,6 +441,14 @@
 		08B39CAB27020CEC00EF9482 /* GXSTaskTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSTaskTableViewCell.m; sourceTree = "<group>"; };
 		08B39CBC2703581E00EF9482 /* GXSGongGaoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSGongGaoModel.h; sourceTree = "<group>"; };
 		08B39CBD2703581E00EF9482 /* GXSGongGaoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSGongGaoModel.m; sourceTree = "<group>"; };
+		08B39CCE270D807E00EF9482 /* GXSLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSLoginViewController.h; sourceTree = "<group>"; };
+		08B39CCF270D807E00EF9482 /* GXSLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSLoginViewController.m; sourceTree = "<group>"; };
+		08B39CD7270ECBDF00EF9482 /* privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy.html; sourceTree = "<group>"; };
+		08B39CD8270ECBE000EF9482 /* user.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = user.html; sourceTree = "<group>"; };
+		08B39CDF270ED55F00EF9482 /* RegisterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
+		08B39CE0270ED55F00EF9482 /* RegisterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
+		08B39CE8270ED57D00EF9482 /* ForGetPassworldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForGetPassworldView.h; sourceTree = "<group>"; };
+		08B39CE9270ED57D00EF9482 /* ForGetPassworldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForGetPassworldView.m; sourceTree = "<group>"; };
 		1C0A9BB627005FFB00B7F49C /* GXSShengTaiYunProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GXSShengTaiYunProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C0A9BB927005FFB00B7F49C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1C0A9BBA27005FFB00B7F49C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1338,6 +1351,26 @@
 			path = HomeModel;
 			sourceTree = "<group>";
 		};
+		08B39CCD270D7FD500EF9482 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				08B39CCE270D807E00EF9482 /* GXSLoginViewController.h */,
+				08B39CCF270D807E00EF9482 /* GXSLoginViewController.m */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		08B39CDE270ED50500EF9482 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				08B39CDF270ED55F00EF9482 /* RegisterView.h */,
+				08B39CE0270ED55F00EF9482 /* RegisterView.m */,
+				08B39CE8270ED57D00EF9482 /* ForGetPassworldView.h */,
+				08B39CE9270ED57D00EF9482 /* ForGetPassworldView.m */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
 		1C0A9BAD27005FFB00B7F49C = {
 			isa = PBXGroup;
 			children = (
@@ -1407,6 +1440,8 @@
 		1C0A9BF02700626C00B7F49C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				08B39CD7270ECBDF00EF9482 /* privacy.html */,
+				08B39CD8270ECBE000EF9482 /* user.html */,
 				1C0A9BC227005FFB00B7F49C /* Main.storyboard */,
 				1C0A9BC527005FFE00B7F49C /* Assets.xcassets */,
 				1C0A9BC727005FFE00B7F49C /* LaunchScreen.storyboard */,
@@ -1430,6 +1465,7 @@
 		1C0A9BF22700627400B7F49C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				08B39CDE270ED50500EF9482 /* LoginView */,
 				1C1A6612270332D600E20892 /* HomeView */,
 				08B39CA927020C9900EF9482 /* TaskView */,
 			);
@@ -1439,6 +1475,7 @@
 		1C0A9BF32700627900B7F49C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				08B39CCD270D7FD500EF9482 /* LoginVC */,
 				1C0A9BF72700632600B7F49C /* HomeVC */,
 				1C0A9BF62700632300B7F49C /* TaskVC */,
 				1C0A9BF52700631E00B7F49C /* MineVC */,
@@ -3293,6 +3330,8 @@
 				1C0AA09A270063A500B7F49C /* MJRefresh.bundle in Resources */,
 				1C0A9BC627005FFE00B7F49C /* Assets.xcassets in Resources */,
 				1C0AA01D270063A500B7F49C /* MNKit.bundle in Resources */,
+				08B39CD9270ECBE000EF9482 /* privacy.html in Resources */,
+				08B39CDA270ECBE000EF9482 /* user.html in Resources */,
 				1C0A9F51270063A400B7F49C /* README.md in Resources */,
 				1C0A9BC427005FFB00B7F49C /* Main.storyboard in Resources */,
 			);
@@ -3414,6 +3453,7 @@
 				1C0A9F82270063A500B7F49C /* MNLock.m in Sources */,
 				1C0A9F4F270063A400B7F49C /* MNNavigationBar.m in Sources */,
 				1C0A9FF2270063A500B7F49C /* MNShapeDialog.m in Sources */,
+				08B39CD0270D807E00EF9482 /* GXSLoginViewController.m in Sources */,
 				1C0AA054270063A500B7F49C /* NSData+MNHelper.m in Sources */,
 				1C0A9F3F270063A400B7F49C /* MNNavigationController.m in Sources */,
 				1C0A9FCD270063A500B7F49C /* MNTransitionAnimator.m in Sources */,
@@ -3457,6 +3497,7 @@
 				1C0A9FA5270063A500B7F49C /* MNEmojiDeleteButton.m in Sources */,
 				1C0A9FC5270063A500B7F49C /* MNLinkTableView.m in Sources */,
 				1C0A9F45270063A400B7F49C /* MNActionSheetController.m in Sources */,
+				08B39CEA270ED57D00EF9482 /* ForGetPassworldView.m in Sources */,
 				1C0A9F5A270063A400B7F49C /* MNPurchaseRequest.m in Sources */,
 				1C0AA0A9270063A500B7F49C /* MJRefreshBackFooter.m in Sources */,
 				1C0A9F48270063A400B7F49C /* MNTabBarController.m in Sources */,
@@ -3634,6 +3675,7 @@
 				1C0A9FCE270063A500B7F49C /* MNDefaultModelTransitionAnimator.m in Sources */,
 				1C0AA03E270063A500B7F49C /* UIWindow+MNHelper.m in Sources */,
 				1C0A9F76270063A500B7F49C /* MNLivePhoto.m in Sources */,
+				08B39CE1270ED55F00EF9482 /* RegisterView.m in Sources */,
 				1C0A9FA8270063A500B7F49C /* MNEmojiElementView.m in Sources */,
 				1CD9C4312701CD6E00E418E1 /* FLExtern.m in Sources */,
 				1C0A9FD5270063A500B7F49C /* MNSwitch.m in Sources */,

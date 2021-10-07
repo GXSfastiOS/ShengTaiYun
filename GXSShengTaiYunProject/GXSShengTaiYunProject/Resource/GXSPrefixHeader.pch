@@ -28,4 +28,9 @@
 /// 请求令牌
 #define ACCESS_TOKEN    [[GXSConfiguration configuration] access_token]
 
+/// 用户协议
+#define TA_USER_LINK  [NSBundle.mainBundle pathForResource:@"user" ofType:@"html"]
+/// 隐私政策
+#define TA_PRIVACY_LINK  [NSBundle.mainBundle pathForResource:@"privacy" ofType:@"html"]
+
 #endif /* GXSPrefixHeader_pch */
