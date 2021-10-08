@@ -28,7 +28,7 @@ static NSString *cellId=@"TaskcellID";
 - (void)createView{
     [super createView];
     self.title=@"添加任务";
-    
+    [self.view addSubview:self.tableView];
 }
 
 #pragma  mark -mothod
@@ -40,7 +40,7 @@ static NSString *cellId=@"TaskcellID";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    GXSAddTableViewCell *cell=[[GXSAddTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    GXSAddTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     ListCellTypeModel *model=self.dataArray[indexPath.row];
     cell.model=model;
     return  cell;
@@ -70,6 +70,7 @@ static NSString *cellId=@"TaskcellID";
         _tableView.delegate               =self;
         _tableView.dataSource             =self;
         _tableView.tableFooterView        = [[UIView alloc]init];
+        _tableView.backgroundColor=UIColor.redColor;
         _tableView.separatorStyle         =UITableViewCellSeparatorStyleNone;
         [_tableView registerNib:[UINib nibWithNibName:@"GXSAddTableViewCell" bundle:nil] forCellReuseIdentifier:cellId];
     }
@@ -93,8 +94,6 @@ static NSString *cellId=@"TaskcellID";
             }
             [_dataArray addObject:model];
         }
-   
-        
     }
     return _dataArray;
 }
