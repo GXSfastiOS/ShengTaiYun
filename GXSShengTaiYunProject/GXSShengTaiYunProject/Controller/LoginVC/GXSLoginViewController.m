@@ -36,7 +36,7 @@
     self.scrollView.backgroundColor=[UIColor colorWithHex:@"#BDBFC4"];
     
     UIImage *headerImage = [UIImage imageNamed:@"bg"];
-    CGSize headerSize = CGSizeMultiplyToWidth(headerImage.size, scrollView.width_mn);
+//    CGSize headerSize = CGSizeMultiplyToWidth(headerImage.size, scrollView.width_mn);
     MNAdsorbView *headerView = [[MNAdsorbView alloc] initWithFrame:CGRectMake(0.f, 0.f, scrollView.width_mn, 285.f)];
     headerView.imageView.image = headerImage;
     self.headerView=headerView;

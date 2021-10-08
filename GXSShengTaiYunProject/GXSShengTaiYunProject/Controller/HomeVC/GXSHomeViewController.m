@@ -8,6 +8,7 @@
 #import "GXSHomeViewController.h"
 #import "GXSGonggaoViewController.h"
 #import "GXSAllHuanJingViewController.h"
+#import "GXSNewProjectViewController.h"
 
 @interface GXSHomeViewController ()
 //btnArray
@@ -115,7 +116,8 @@
     NSLog(@"%ld",(long)[tap view].tag);
     NSInteger tag=[tap view].tag;
     if (tag==100) {
-        
+        GXSNewProjectViewController *new=[[GXSNewProjectViewController alloc]init];
+        [self.navigationController pushViewController:new animated:YES];
     }else if(tag==101){
         GXSAllHuanJingViewController *huangjing=[[GXSAllHuanJingViewController alloc]init];
         [self.navigationController pushViewController:huangjing animated:YES];

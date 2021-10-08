@@ -406,6 +406,12 @@
 		1C0AA0C6270075DE00B7F49C /* GXSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0AA0C5270075DE00B7F49C /* GXSHomeViewController.m */; };
 		1C0AA0C92700765A00B7F49C /* GXSTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0AA0C82700765A00B7F49C /* GXSTaskViewController.m */; };
 		1C0AA0CC270076D100B7F49C /* GXSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0AA0CB270076D100B7F49C /* GXSMineViewController.m */; };
+		1C0B82D8270FDC4C0029EDF6 /* GXSNewProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0B82D7270FDC4C0029EDF6 /* GXSNewProjectViewController.m */; };
+		1C0B82DB270FF7AC0029EDF6 /* GXSNewprojectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0B82DA270FF7AC0029EDF6 /* GXSNewprojectModel.m */; };
+		1C0B82DE2710363A0029EDF6 /* ListCellTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0B82DD2710363A0029EDF6 /* ListCellTypeModel.m */; };
+		1C0B82E12710389E0029EDF6 /* GXSAddprojectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0B82E02710389E0029EDF6 /* GXSAddprojectViewController.m */; };
+		1C0B82E8271045DF0029EDF6 /* GXSAddTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0B82E6271045DF0029EDF6 /* GXSAddTableViewCell.m */; };
+		1C0B82E9271045DF0029EDF6 /* GXSAddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C0B82E7271045DF0029EDF6 /* GXSAddTableViewCell.xib */; };
 		1C1A660E2702A2E800E20892 /* TaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A660D2702A2E800E20892 /* TaskModel.m */; };
 		1C1A661127032FDA00E20892 /* GXSGonggaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A661027032FDA00E20892 /* GXSGonggaoViewController.m */; };
 		1C1A66152703331100E20892 /* GXSGonggaoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A66142703331100E20892 /* GXSGonggaoTableViewCell.m */; };
@@ -1198,6 +1204,17 @@
 		1C0AA0C82700765A00B7F49C /* GXSTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSTaskViewController.m; sourceTree = "<group>"; };
 		1C0AA0CA270076D100B7F49C /* GXSMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSMineViewController.h; sourceTree = "<group>"; };
 		1C0AA0CB270076D100B7F49C /* GXSMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSMineViewController.m; sourceTree = "<group>"; };
+		1C0B82D6270FDC4C0029EDF6 /* GXSNewProjectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSNewProjectViewController.h; sourceTree = "<group>"; };
+		1C0B82D7270FDC4C0029EDF6 /* GXSNewProjectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSNewProjectViewController.m; sourceTree = "<group>"; };
+		1C0B82D9270FF7AC0029EDF6 /* GXSNewprojectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSNewprojectModel.h; sourceTree = "<group>"; };
+		1C0B82DA270FF7AC0029EDF6 /* GXSNewprojectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSNewprojectModel.m; sourceTree = "<group>"; };
+		1C0B82DC2710363A0029EDF6 /* ListCellTypeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ListCellTypeModel.h; path = GXSShengTaiYunProject/Model/HomeModel/ListCellTypeModel.h; sourceTree = SOURCE_ROOT; };
+		1C0B82DD2710363A0029EDF6 /* ListCellTypeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ListCellTypeModel.m; path = GXSShengTaiYunProject/Model/HomeModel/ListCellTypeModel.m; sourceTree = SOURCE_ROOT; };
+		1C0B82DF2710389E0029EDF6 /* GXSAddprojectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSAddprojectViewController.h; sourceTree = "<group>"; };
+		1C0B82E02710389E0029EDF6 /* GXSAddprojectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSAddprojectViewController.m; sourceTree = "<group>"; };
+		1C0B82E5271045DF0029EDF6 /* GXSAddTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSAddTableViewCell.h; sourceTree = "<group>"; };
+		1C0B82E6271045DF0029EDF6 /* GXSAddTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSAddTableViewCell.m; sourceTree = "<group>"; };
+		1C0B82E7271045DF0029EDF6 /* GXSAddTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GXSAddTableViewCell.xib; sourceTree = "<group>"; };
 		1C1A660C2702A2E800E20892 /* TaskModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TaskModel.h; path = GXSShengTaiYunProject/AppDelegate/TaskModel.h; sourceTree = SOURCE_ROOT; };
 		1C1A660D2702A2E800E20892 /* TaskModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TaskModel.m; path = GXSShengTaiYunProject/AppDelegate/TaskModel.m; sourceTree = SOURCE_ROOT; };
 		1C1A660F27032FDA00E20892 /* GXSGonggaoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSGonggaoViewController.h; sourceTree = "<group>"; };
@@ -1316,6 +1333,9 @@
 			children = (
 				08B39CAA27020CEC00EF9482 /* GXSTaskTableViewCell.h */,
 				08B39CAB27020CEC00EF9482 /* GXSTaskTableViewCell.m */,
+				1C0B82E5271045DF0029EDF6 /* GXSAddTableViewCell.h */,
+				1C0B82E6271045DF0029EDF6 /* GXSAddTableViewCell.m */,
+				1C0B82E7271045DF0029EDF6 /* GXSAddTableViewCell.xib */,
 			);
 			path = TaskView;
 			sourceTree = "<group>";
@@ -1338,6 +1358,8 @@
 			children = (
 				1C1A660C2702A2E800E20892 /* TaskModel.h */,
 				1C1A660D2702A2E800E20892 /* TaskModel.m */,
+				1C0B82DC2710363A0029EDF6 /* ListCellTypeModel.h */,
+				1C0B82DD2710363A0029EDF6 /* ListCellTypeModel.m */,
 			);
 			path = TaskModel;
 			sourceTree = "<group>";
@@ -1347,6 +1369,8 @@
 			children = (
 				08B39CBC2703581E00EF9482 /* GXSGongGaoModel.h */,
 				08B39CBD2703581E00EF9482 /* GXSGongGaoModel.m */,
+				1C0B82D9270FF7AC0029EDF6 /* GXSNewprojectModel.h */,
+				1C0B82DA270FF7AC0029EDF6 /* GXSNewprojectModel.m */,
 			);
 			path = HomeModel;
 			sourceTree = "<group>";
@@ -1504,6 +1528,8 @@
 			children = (
 				1C0AA0C72700765A00B7F49C /* GXSTaskViewController.h */,
 				1C0AA0C82700765A00B7F49C /* GXSTaskViewController.m */,
+				1C0B82DF2710389E0029EDF6 /* GXSAddprojectViewController.h */,
+				1C0B82E02710389E0029EDF6 /* GXSAddprojectViewController.m */,
 			);
 			path = TaskVC;
 			sourceTree = "<group>";
@@ -1517,6 +1543,8 @@
 				1C1A661027032FDA00E20892 /* GXSGonggaoViewController.m */,
 				1C1E02D7270401F9000244F4 /* GXSAllHuanJingViewController.h */,
 				1C1E02D8270401F9000244F4 /* GXSAllHuanJingViewController.m */,
+				1C0B82D6270FDC4C0029EDF6 /* GXSNewProjectViewController.h */,
+				1C0B82D7270FDC4C0029EDF6 /* GXSNewProjectViewController.m */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -3329,6 +3357,7 @@
 				1C0A9BC927005FFE00B7F49C /* LaunchScreen.storyboard in Resources */,
 				1C0AA09A270063A500B7F49C /* MJRefresh.bundle in Resources */,
 				1C0A9BC627005FFE00B7F49C /* Assets.xcassets in Resources */,
+				1C0B82E9271045DF0029EDF6 /* GXSAddTableViewCell.xib in Resources */,
 				1C0AA01D270063A500B7F49C /* MNKit.bundle in Resources */,
 				08B39CD9270ECBE000EF9482 /* privacy.html in Resources */,
 				08B39CDA270ECBE000EF9482 /* user.html in Resources */,
@@ -3508,6 +3537,7 @@
 				1C0A9FB5270063A500B7F49C /* MNCollectionViewLayout.m in Sources */,
 				1C0A9FB3270063A500B7F49C /* MNNumberKeyboard.m in Sources */,
 				1C0A9FC3270063A500B7F49C /* MNLinkViewController.m in Sources */,
+				1C0B82D8270FDC4C0029EDF6 /* GXSNewProjectViewController.m in Sources */,
 				1C0A9FD3270063A500B7F49C /* MNMenuTransitionAnimator.m in Sources */,
 				1C0A9F55270063A400B7F49C /* MNLaunchImage.m in Sources */,
 				1C0AA009270063A500B7F49C /* MNAssetSelectCell.m in Sources */,
@@ -3534,6 +3564,7 @@
 				1C0A9FC8270063A500B7F49C /* MNPortalTransitionAnimator.m in Sources */,
 				1C0A9FF5270063A500B7F49C /* MNLoadDialog.m in Sources */,
 				1C0AA0B2270063A500B7F49C /* MNAudioConvert.m in Sources */,
+				1C0B82DB270FF7AC0029EDF6 /* GXSNewprojectModel.m in Sources */,
 				1C0A9FDE270063A500B7F49C /* MNPageControl.m in Sources */,
 				08B39CBE2703581E00EF9482 /* GXSGongGaoModel.m in Sources */,
 				1C0AA055270063A500B7F49C /* NSArray+MNSafely.m in Sources */,
@@ -3541,6 +3572,7 @@
 				1C0A9FF8270063A500B7F49C /* MNTextView.m in Sources */,
 				1C0AA061270063A500B7F49C /* JPImageresizerFrameView.m in Sources */,
 				1C0A9FEB270063A500B7F49C /* MNMaskDialog.m in Sources */,
+				1C0B82E8271045DF0029EDF6 /* GXSAddTableViewCell.m in Sources */,
 				1C0A9FC9270063A500B7F49C /* MNSlideTransitionAnimator.m in Sources */,
 				1C0AA047270063A500B7F49C /* CAAnimation+MNHelper.m in Sources */,
 				1C0A9FED270063A500B7F49C /* MNDotDialog.m in Sources */,
@@ -3687,6 +3719,7 @@
 				1C0A9F49270063A400B7F49C /* MNConfiguration.m in Sources */,
 				1C0AA099270063A500B7F49C /* MJRefreshConst.m in Sources */,
 				1C0AA00E270063A500B7F49C /* MNAssetSelectView.m in Sources */,
+				1C0B82E12710389E0029EDF6 /* GXSAddprojectViewController.m in Sources */,
 				1C0A9FB9270063A500B7F49C /* MNCardLayout.m in Sources */,
 				1C0A9F4B270063A400B7F49C /* MNDragView.m in Sources */,
 				1C0AA062270063A500B7F49C /* JPImageresizerConfigure.m in Sources */,
@@ -3704,6 +3737,7 @@
 				1C0A9FB0270063A500B7F49C /* NSAttributedString+MNEmojiHelper.m in Sources */,
 				1C0AA03A270063A500B7F49C /* UIImage+MNAttributed.m in Sources */,
 				1C0A9FBE270063A500B7F49C /* MNAdsorbView.m in Sources */,
+				1C0B82DE2710363A0029EDF6 /* ListCellTypeModel.m in Sources */,
 				1C0A9F91270063A500B7F49C /* UIScrollView+MNSegmentPage.m in Sources */,
 				1C0A9F4E270063A400B7F49C /* MNEmptyView.m in Sources */,
 				1C0AA0CC270076D100B7F49C /* GXSMineViewController.m in Sources */,

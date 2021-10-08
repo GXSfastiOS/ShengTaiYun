@@ -9,6 +9,7 @@ static NSString *cellId=@"TaskcellID";
 
 #import "GXSTaskViewController.h"
 #import "GXSTaskTableViewCell.h"
+#import "GXSAddprojectViewController.h"
 
 @interface GXSTaskViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 @property (nonatomic,strong) UITableView *tableView;
@@ -90,7 +91,8 @@ static NSString *cellId=@"TaskcellID";
 }
 
 - (void)addTask{
-    
+    GXSAddprojectViewController *add=[[GXSAddprojectViewController alloc]init];
+    [self.navigationController pushViewController:add animated:YES];
 }
 
 #pragma mark - UISearchBarDelegate
