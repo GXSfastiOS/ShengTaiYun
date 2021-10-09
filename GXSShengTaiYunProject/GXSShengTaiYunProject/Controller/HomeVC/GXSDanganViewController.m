@@ -102,12 +102,40 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
     _tableView.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
     [scrollView addSubview:_tableView];
     
+    UIView *footerView=[[UIView alloc]initWithFrame:CGRectMake(0.f, 0.f, self.tableView.width_mn, 50.f)];
+    footerView.userInteractionEnabled=YES;
+    UILabel *allLab=[[UILabel alloc]initWithFrame:footerView.frame];
+    allLab.text=@"查看全部";
+    allLab.font=[UIFont systemFontOfSize:15];
+    allLab.textColor=GXS_THEME_COLOR;
+    allLab.textAlignment=NSTextAlignmentCenter;
+    allLab.center=footerView.center;
+    [footerView addSubview:allLab];
+    
+    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(allTopClick)];
+    [footerView addGestureRecognizer:tap];
+    self.tableView.tableFooterView=footerView;
+    
     _bottomTableView=[[UITableView alloc]initWithFrame:CGRectMake(15.f, _tableView.bottom_mn+15.f, MN_SCREEN_WIDTH-30.f, 250.f) style:UITableViewStylePlain];
     _bottomTableView.delegate               =self;
     _bottomTableView.dataSource             =self;
     _bottomTableView.layer.cornerRadius     =10.f;
     _bottomTableView.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
     [scrollView addSubview:_bottomTableView];
+    
+    UIView *btoFooterView=[[UIView alloc]initWithFrame:CGRectMake(0.f, 0.f, self.tableView.width_mn, 50.f)];
+    btoFooterView.userInteractionEnabled=YES;
+    UILabel *allLabBto=[[UILabel alloc]initWithFrame:btoFooterView.frame];
+    allLabBto.text=@"查看全部";
+    allLabBto.font=[UIFont systemFontOfSize:15];
+    allLabBto.textAlignment=NSTextAlignmentCenter;
+    allLabBto.textColor=GXS_THEME_COLOR;
+    allLabBto.center=btoFooterView.center;
+    [btoFooterView addSubview:allLabBto];
+    
+    UITapGestureRecognizer *tapBto=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(allBtoClick)];
+    [btoFooterView addGestureRecognizer:tapBto];
+    self.bottomTableView.tableFooterView=btoFooterView;
     
 }
 
@@ -163,6 +191,14 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
 }
 
 - (void)sumbitClick{
+    
+}
+
+- (void)allTopClick{
+    
+}
+
+- (void)allBtoClick{
     
 }
 
