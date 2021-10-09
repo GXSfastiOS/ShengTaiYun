@@ -16,7 +16,6 @@
 #import "GXSConfiguration.h"
 
 
-
 /// 主题颜色
 #define GXS_THEME_COLOR     MN_R_G_B(68.f, 157.f, 89.f)
 /// 灰色

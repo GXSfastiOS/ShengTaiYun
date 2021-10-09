@@ -14,6 +14,8 @@
 		08B39CDA270ECBE000EF9482 /* user.html in Resources */ = {isa = PBXBuildFile; fileRef = 08B39CD8270ECBE000EF9482 /* user.html */; };
 		08B39CE1270ED55F00EF9482 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B39CE0270ED55F00EF9482 /* RegisterView.m */; };
 		08B39CEA270ED57D00EF9482 /* ForGetPassworldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B39CE9270ED57D00EF9482 /* ForGetPassworldView.m */; };
+		1C0431D427113FB3000810B0 /* TAProfileSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0431D227113FB3000810B0 /* TAProfileSelectCell.m */; };
+		1C0431D72711401B000810B0 /* TAProfileSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0431D52711401B000810B0 /* TAProfileSelectModel.m */; };
 		1C0A9BBB27005FFB00B7F49C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A9BBA27005FFB00B7F49C /* AppDelegate.m */; };
 		1C0A9BC427005FFB00B7F49C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A9BC227005FFB00B7F49C /* Main.storyboard */; };
 		1C0A9BC627005FFE00B7F49C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A9BC527005FFE00B7F49C /* Assets.xcassets */; };
@@ -417,6 +419,7 @@
 		1C1A66152703331100E20892 /* GXSGonggaoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A66142703331100E20892 /* GXSGonggaoTableViewCell.m */; };
 		1C1E02D9270401F9000244F4 /* GXSAllHuanJingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1E02D8270401F9000244F4 /* GXSAllHuanJingViewController.m */; };
 		1C3EC16227016597000C8845 /* GXSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3EC16127016597000C8845 /* GXSTabBarViewController.m */; };
+		1C76DB5F27117E7500F9B3EB /* GXSDanganViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C76DB5D27117E7500F9B3EB /* GXSDanganViewController.m */; };
 		1CD9C4252701C97300E418E1 /* GXSHTTPDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C4232701C97300E418E1 /* GXSHTTPDataRequest.m */; };
 		1CD9C42C2701C99700E418E1 /* GXSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C4282701C99600E418E1 /* GXSConfiguration.m */; };
 		1CD9C42E2701C99700E418E1 /* GXSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C42A2701C99600E418E1 /* GXSUser.m */; };
@@ -455,6 +458,10 @@
 		08B39CE0270ED55F00EF9482 /* RegisterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
 		08B39CE8270ED57D00EF9482 /* ForGetPassworldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForGetPassworldView.h; sourceTree = "<group>"; };
 		08B39CE9270ED57D00EF9482 /* ForGetPassworldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForGetPassworldView.m; sourceTree = "<group>"; };
+		1C0431D227113FB3000810B0 /* TAProfileSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAProfileSelectCell.m; sourceTree = "<group>"; };
+		1C0431D327113FB3000810B0 /* TAProfileSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAProfileSelectCell.h; sourceTree = "<group>"; };
+		1C0431D52711401B000810B0 /* TAProfileSelectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAProfileSelectModel.m; sourceTree = "<group>"; };
+		1C0431D62711401B000810B0 /* TAProfileSelectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAProfileSelectModel.h; sourceTree = "<group>"; };
 		1C0A9BB627005FFB00B7F49C /* GXSShengTaiYunProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GXSShengTaiYunProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C0A9BB927005FFB00B7F49C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1C0A9BBA27005FFB00B7F49C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1225,6 +1232,8 @@
 		1C1E02D8270401F9000244F4 /* GXSAllHuanJingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSAllHuanJingViewController.m; sourceTree = "<group>"; };
 		1C3EC16027016597000C8845 /* GXSTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSTabBarViewController.h; sourceTree = "<group>"; };
 		1C3EC16127016597000C8845 /* GXSTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSTabBarViewController.m; sourceTree = "<group>"; };
+		1C76DB5D27117E7500F9B3EB /* GXSDanganViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXSDanganViewController.m; sourceTree = "<group>"; };
+		1C76DB5E27117E7500F9B3EB /* GXSDanganViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSDanganViewController.h; sourceTree = "<group>"; };
 		1CD9C4232701C97300E418E1 /* GXSHTTPDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXSHTTPDataRequest.m; sourceTree = "<group>"; };
 		1CD9C4242701C97300E418E1 /* GXSHTTPDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSHTTPDataRequest.h; sourceTree = "<group>"; };
 		1CD9C4272701C99600E418E1 /* GXSConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSConfiguration.h; sourceTree = "<group>"; };
@@ -1336,6 +1345,8 @@
 				1C0B82E5271045DF0029EDF6 /* GXSAddTableViewCell.h */,
 				1C0B82E6271045DF0029EDF6 /* GXSAddTableViewCell.m */,
 				1C0B82E7271045DF0029EDF6 /* GXSAddTableViewCell.xib */,
+				1C0431D327113FB3000810B0 /* TAProfileSelectCell.h */,
+				1C0431D227113FB3000810B0 /* TAProfileSelectCell.m */,
 			);
 			path = TaskView;
 			sourceTree = "<group>";
@@ -1360,6 +1371,8 @@
 				1C1A660D2702A2E800E20892 /* TaskModel.m */,
 				1C0B82DC2710363A0029EDF6 /* ListCellTypeModel.h */,
 				1C0B82DD2710363A0029EDF6 /* ListCellTypeModel.m */,
+				1C0431D62711401B000810B0 /* TAProfileSelectModel.h */,
+				1C0431D52711401B000810B0 /* TAProfileSelectModel.m */,
 			);
 			path = TaskModel;
 			sourceTree = "<group>";
@@ -1545,6 +1558,8 @@
 				1C1E02D8270401F9000244F4 /* GXSAllHuanJingViewController.m */,
 				1C0B82D6270FDC4C0029EDF6 /* GXSNewProjectViewController.h */,
 				1C0B82D7270FDC4C0029EDF6 /* GXSNewProjectViewController.m */,
+				1C76DB5E27117E7500F9B3EB /* GXSDanganViewController.h */,
+				1C76DB5D27117E7500F9B3EB /* GXSDanganViewController.m */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -3525,6 +3540,7 @@
 				1C0AA052270063A500B7F49C /* NSBundle+MNHelper.m in Sources */,
 				1C0A9FA5270063A500B7F49C /* MNEmojiDeleteButton.m in Sources */,
 				1C0A9FC5270063A500B7F49C /* MNLinkTableView.m in Sources */,
+				1C0431D427113FB3000810B0 /* TAProfileSelectCell.m in Sources */,
 				1C0A9F45270063A400B7F49C /* MNActionSheetController.m in Sources */,
 				08B39CEA270ED57D00EF9482 /* ForGetPassworldView.m in Sources */,
 				1C0A9F5A270063A400B7F49C /* MNPurchaseRequest.m in Sources */,
@@ -3594,6 +3610,7 @@
 				1C0AA04D270063A500B7F49C /* NSInvocation+MNHelper.m in Sources */,
 				1C0AA01C270063A500B7F49C /* MNCollectionViewCell.m in Sources */,
 				1C0AA00F270063A500B7F49C /* MNAlbumView.m in Sources */,
+				1C0431D72711401B000810B0 /* TAProfileSelectModel.m in Sources */,
 				1C0AA04A270063A500B7F49C /* CALayer+MNAnimation.m in Sources */,
 				1C0AA09D270063A500B7F49C /* UIView+MJExtension.m in Sources */,
 				1C0A9FE4270063A500B7F49C /* MNLogModel.m in Sources */,
@@ -3601,6 +3618,7 @@
 				1C0AA0A4270063A500B7F49C /* MJRefreshNormalHeader.m in Sources */,
 				1C0A9FC2270063A500B7F49C /* MNLinkTableConfiguration.m in Sources */,
 				1C0AA03C270063A500B7F49C /* UIScrollView+MNHelper.m in Sources */,
+				1C76DB5F27117E7500F9B3EB /* GXSDanganViewController.m in Sources */,
 				1C0A9FFB270063A500B7F49C /* MNAssetPreviewController.m in Sources */,
 				1C0A9FCB270063A500B7F49C /* MNSolubleTransitionAnimator.m in Sources */,
 				1C0A9FE3270063A500B7F49C /* MNDebuger.m in Sources */,
@@ -3974,7 +3992,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = GXSShengTaiYun.GXSShengTaiYunProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -4016,7 +4034,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = GXSShengTaiYun.GXSShengTaiYunProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

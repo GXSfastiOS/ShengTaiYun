@@ -9,6 +9,7 @@
 #import "GXSGonggaoViewController.h"
 #import "GXSAllHuanJingViewController.h"
 #import "GXSNewProjectViewController.h"
+#import "GXSDanganViewController.h"
 
 @interface GXSHomeViewController ()
 //btnArray
@@ -31,7 +32,7 @@
 #pragma  mark -mothod
 
 - (void)setViewUp{
-    self.contentView.backgroundColor=UIColor.orangeColor;
+//    self.contentView.backgroundColor=UIColor.orangeColor;
     self.isShow=NO;
     UIView *btnView=[[UIView alloc]init];
     btnView.width_mn=self.contentView.width_mn;
@@ -122,7 +123,8 @@
         GXSAllHuanJingViewController *huangjing=[[GXSAllHuanJingViewController alloc]init];
         [self.navigationController pushViewController:huangjing animated:YES];
     }else if(tag==102){
-        
+        GXSDanganViewController *dangan=[[GXSDanganViewController alloc]init];
+        [self.navigationController pushViewController:dangan animated:YES];
     }else if(tag==103){
         GXSGonggaoViewController *gonggao=[[GXSGonggaoViewController alloc]init];
         [self.navigationController pushViewController:gonggao animated:YES];
