@@ -116,8 +116,6 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
     [btn setSemanticContentAttribute:UISemanticContentAttributeForceRightToLeft];
     //设置图片和文字之间的间隙
     btn.imageEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
-//    btn.imageEdgeInsets=UIEdgeInsetsMake(0.f, 50.f, 0.f, -50.f);
-//    btn.titleEdgeInsets=UIEdgeInsetsMake(0.f, -50.f, 0.f, 50.f);
     btn.backgroundColor=UIColor.whiteColor;
     btn.layer.cornerRadius=10.f;
     btn.tag=section+666;

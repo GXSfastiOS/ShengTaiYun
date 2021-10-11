@@ -10,6 +10,7 @@
 #import "GXSAllHuanJingViewController.h"
 #import "GXSNewProjectViewController.h"
 #import "GXSDanganViewController.h"
+#import "GXSShengTaiHeChaViewController.h"
 
 @interface GXSHomeViewController ()
 //btnArray
@@ -123,7 +124,8 @@
         GXSAllHuanJingViewController *huangjing=[[GXSAllHuanJingViewController alloc]init];
         [self.navigationController pushViewController:huangjing animated:YES];
     }else if(tag==102){
-        GXSDanganViewController *dangan=[[GXSDanganViewController alloc]init];
+//        GXSDanganViewController *dangan=[[GXSDanganViewController alloc]init];
+        GXSShengTaiHeChaViewController *dangan=[[GXSShengTaiHeChaViewController alloc]init];
         [self.navigationController pushViewController:dangan animated:YES];
     }else if(tag==103){
         GXSGonggaoViewController *gonggao=[[GXSGonggaoViewController alloc]init];
