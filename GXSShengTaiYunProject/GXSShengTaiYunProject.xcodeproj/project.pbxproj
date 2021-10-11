@@ -14,6 +14,7 @@
 		08B39CDA270ECBE000EF9482 /* user.html in Resources */ = {isa = PBXBuildFile; fileRef = 08B39CD8270ECBE000EF9482 /* user.html */; };
 		08B39CE1270ED55F00EF9482 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B39CE0270ED55F00EF9482 /* RegisterView.m */; };
 		08B39CEA270ED57D00EF9482 /* ForGetPassworldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B39CE9270ED57D00EF9482 /* ForGetPassworldView.m */; };
+		08B39CF62712BB6100EF9482 /* GXSUSInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B39CF52712BB6100EF9482 /* GXSUSInfoViewController.m */; };
 		1C0431D427113FB3000810B0 /* TAProfileSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0431D227113FB3000810B0 /* TAProfileSelectCell.m */; };
 		1C0431D72711401B000810B0 /* TAProfileSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0431D52711401B000810B0 /* TAProfileSelectModel.m */; };
 		1C0A9BBB27005FFB00B7F49C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A9BBA27005FFB00B7F49C /* AppDelegate.m */; };
@@ -458,6 +459,8 @@
 		08B39CE0270ED55F00EF9482 /* RegisterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
 		08B39CE8270ED57D00EF9482 /* ForGetPassworldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForGetPassworldView.h; sourceTree = "<group>"; };
 		08B39CE9270ED57D00EF9482 /* ForGetPassworldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForGetPassworldView.m; sourceTree = "<group>"; };
+		08B39CF42712BB6100EF9482 /* GXSUSInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSUSInfoViewController.h; sourceTree = "<group>"; };
+		08B39CF52712BB6100EF9482 /* GXSUSInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSUSInfoViewController.m; sourceTree = "<group>"; };
 		1C0431D227113FB3000810B0 /* TAProfileSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAProfileSelectCell.m; sourceTree = "<group>"; };
 		1C0431D327113FB3000810B0 /* TAProfileSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAProfileSelectCell.h; sourceTree = "<group>"; };
 		1C0431D52711401B000810B0 /* TAProfileSelectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAProfileSelectModel.m; sourceTree = "<group>"; };
@@ -1532,6 +1535,8 @@
 			children = (
 				1C0AA0CA270076D100B7F49C /* GXSMineViewController.h */,
 				1C0AA0CB270076D100B7F49C /* GXSMineViewController.m */,
+				08B39CF42712BB6100EF9482 /* GXSUSInfoViewController.h */,
+				08B39CF52712BB6100EF9482 /* GXSUSInfoViewController.m */,
 			);
 			path = MineVC;
 			sourceTree = "<group>";
@@ -3554,6 +3559,7 @@
 				1C0A9FB3270063A500B7F49C /* MNNumberKeyboard.m in Sources */,
 				1C0A9FC3270063A500B7F49C /* MNLinkViewController.m in Sources */,
 				1C0B82D8270FDC4C0029EDF6 /* GXSNewProjectViewController.m in Sources */,
+				08B39CF62712BB6100EF9482 /* GXSUSInfoViewController.m in Sources */,
 				1C0A9FD3270063A500B7F49C /* MNMenuTransitionAnimator.m in Sources */,
 				1C0A9F55270063A400B7F49C /* MNLaunchImage.m in Sources */,
 				1C0AA009270063A500B7F49C /* MNAssetSelectCell.m in Sources */,
