@@ -15,6 +15,8 @@
 #import "GXSUser.h"
 #import "GXSConfiguration.h"
 
+#import <Masonry/Masonry.h>
+
 
 /// 主题颜色
 #define GXS_THEME_COLOR     MN_R_G_B(68.f, 157.f, 89.f)
@@ -22,6 +24,9 @@
 #define PAGE_COLOR          MN_RGB(160.f)
 /// 十六进制颜色 Hex
 #define ssRGBHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+///背景灰色
+#define  BG_GARYCOLOR   ssRGBHex(0XEEEEEE)
+
 /// 网址拼接
 #define URL_HANDING(name)  [GXSConfiguration.configuration handUrl:name]
 /// 请求令牌

@@ -12,7 +12,7 @@ DEPENDENCIES:
   - DZNEmptyDataSet
   - IQKeyboardManager
   - JXCategoryView (~> 1.5.5)
-  - Masonry (~> 1.1.0)
+  - Masonry
   - SDWebImage
   - YYModel (~> 1.0.4)
 
@@ -33,6 +33,6 @@ SPEC CHECKSUMS:
   SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: a38362a834865965acd989919a0ee5d663501a50
+PODFILE CHECKSUM: 8950b256a057caa762bf30e19f349bac29258565
 
 COCOAPODS: 1.10.0

@@ -424,6 +424,10 @@
 		1CD9C42C2701C99700E418E1 /* GXSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C4282701C99600E418E1 /* GXSConfiguration.m */; };
 		1CD9C42E2701C99700E418E1 /* GXSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C42A2701C99600E418E1 /* GXSUser.m */; };
 		1CD9C4312701CD6E00E418E1 /* FLExtern.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C42F2701CD6E00E418E1 /* FLExtern.m */; };
+		1CE241242713CB73003EB6D9 /* GXSMyKaopingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE241232713CB73003EB6D9 /* GXSMyKaopingViewController.m */; };
+		1CE241272713D1B5003EB6D9 /* GXSKaoheListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE241262713D1B5003EB6D9 /* GXSKaoheListViewController.m */; };
+		1CE2412D271412C7003EB6D9 /* GXSHechaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2412C271412C7003EB6D9 /* GXSHechaViewController.m */; };
+		1CE2413027141A2F003EB6D9 /* GXSShengTaiHeChaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2412F27141A2F003EB6D9 /* GXSShengTaiHeChaViewController.m */; };
 		1CF12EEA2704506F00048BCA /* GXSShaixuanAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF12EE92704506F00048BCA /* GXSShaixuanAlertView.m */; };
 		BC75AB25814AA4F16AD81A26 /* Pods_GXSShengTaiYunProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6823FC11A80C47C8DC205FE7 /* Pods_GXSShengTaiYunProject.framework */; };
 /* End PBXBuildFile section */
@@ -1242,6 +1246,14 @@
 		1CD9C42B2701C99700E418E1 /* GXSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSUser.h; sourceTree = "<group>"; };
 		1CD9C42F2701CD6E00E418E1 /* FLExtern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLExtern.m; sourceTree = "<group>"; };
 		1CD9C4302701CD6E00E418E1 /* FLExtern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLExtern.h; sourceTree = "<group>"; };
+		1CE241222713CB73003EB6D9 /* GXSMyKaopingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSMyKaopingViewController.h; sourceTree = "<group>"; };
+		1CE241232713CB73003EB6D9 /* GXSMyKaopingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSMyKaopingViewController.m; sourceTree = "<group>"; };
+		1CE241252713D1B5003EB6D9 /* GXSKaoheListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSKaoheListViewController.h; sourceTree = "<group>"; };
+		1CE241262713D1B5003EB6D9 /* GXSKaoheListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSKaoheListViewController.m; sourceTree = "<group>"; };
+		1CE2412B271412C7003EB6D9 /* GXSHechaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSHechaViewController.h; sourceTree = "<group>"; };
+		1CE2412C271412C7003EB6D9 /* GXSHechaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSHechaViewController.m; sourceTree = "<group>"; };
+		1CE2412E27141A2F003EB6D9 /* GXSShengTaiHeChaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSShengTaiHeChaViewController.h; sourceTree = "<group>"; };
+		1CE2412F27141A2F003EB6D9 /* GXSShengTaiHeChaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSShengTaiHeChaViewController.m; sourceTree = "<group>"; };
 		1CF12EE82704506F00048BCA /* GXSShaixuanAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSShaixuanAlertView.h; sourceTree = "<group>"; };
 		1CF12EE92704506F00048BCA /* GXSShaixuanAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSShaixuanAlertView.m; sourceTree = "<group>"; };
 		491CA2546BB1478C316D110A /* Pods-GXSShengTaiYunProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GXSShengTaiYunProject.debug.xcconfig"; path = "Target Support Files/Pods-GXSShengTaiYunProject/Pods-GXSShengTaiYunProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1532,6 +1544,12 @@
 			children = (
 				1C0AA0CA270076D100B7F49C /* GXSMineViewController.h */,
 				1C0AA0CB270076D100B7F49C /* GXSMineViewController.m */,
+				1CE241222713CB73003EB6D9 /* GXSMyKaopingViewController.h */,
+				1CE241232713CB73003EB6D9 /* GXSMyKaopingViewController.m */,
+				1CE241252713D1B5003EB6D9 /* GXSKaoheListViewController.h */,
+				1CE241262713D1B5003EB6D9 /* GXSKaoheListViewController.m */,
+				1CE2412B271412C7003EB6D9 /* GXSHechaViewController.h */,
+				1CE2412C271412C7003EB6D9 /* GXSHechaViewController.m */,
 			);
 			path = MineVC;
 			sourceTree = "<group>";
@@ -1560,6 +1578,8 @@
 				1C0B82D7270FDC4C0029EDF6 /* GXSNewProjectViewController.m */,
 				1C76DB5E27117E7500F9B3EB /* GXSDanganViewController.h */,
 				1C76DB5D27117E7500F9B3EB /* GXSDanganViewController.m */,
+				1CE2412E27141A2F003EB6D9 /* GXSShengTaiHeChaViewController.h */,
+				1CE2412F27141A2F003EB6D9 /* GXSShengTaiHeChaViewController.m */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -3522,6 +3542,7 @@
 				1C0AA0A1270063A500B7F49C /* MJRefreshAutoStateFooter.m in Sources */,
 				1C0A9F63270063A400B7F49C /* MNAssetExporter+MNExportMetadata.m in Sources */,
 				1C0A9FA4270063A500B7F49C /* MNEmojiCell.m in Sources */,
+				1CE2412D271412C7003EB6D9 /* GXSHechaViewController.m in Sources */,
 				1C0A9F3E270063A400B7F49C /* MNBaseViewController.m in Sources */,
 				1C0AA02D270063A500B7F49C /* UIScreen+MNHelper.m in Sources */,
 				1C0A9F68270063A400B7F49C /* MNAuthenticator.m in Sources */,
@@ -3622,6 +3643,7 @@
 				1C0A9FFB270063A500B7F49C /* MNAssetPreviewController.m in Sources */,
 				1C0A9FCB270063A500B7F49C /* MNSolubleTransitionAnimator.m in Sources */,
 				1C0A9FE3270063A500B7F49C /* MNDebuger.m in Sources */,
+				1CE241272713D1B5003EB6D9 /* GXSKaoheListViewController.m in Sources */,
 				1C0A9F7A270063A500B7F49C /* UIApplication+MNNetworkActivity.m in Sources */,
 				1C0A9FFA270063A500B7F49C /* MNAssetPicker.m in Sources */,
 				1C0A9FFC270063A500B7F49C /* MNVideoTailorController.m in Sources */,
@@ -3634,6 +3656,7 @@
 				1C0A9F4D270063A400B7F49C /* MNTabBar.m in Sources */,
 				1C1E02D9270401F9000244F4 /* GXSAllHuanJingViewController.m in Sources */,
 				1C0A9F7B270063A500B7F49C /* MNURLDownloadRequest.m in Sources */,
+				1CE2413027141A2F003EB6D9 /* GXSShengTaiHeChaViewController.m in Sources */,
 				1C0A9F66270063A400B7F49C /* MNAssetExportSession.m in Sources */,
 				1C0A9F42270063A400B7F49C /* MNWebViewController.m in Sources */,
 				1C0AA0A3270063A500B7F49C /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -3737,6 +3760,7 @@
 				1C0A9F49270063A400B7F49C /* MNConfiguration.m in Sources */,
 				1C0AA099270063A500B7F49C /* MJRefreshConst.m in Sources */,
 				1C0AA00E270063A500B7F49C /* MNAssetSelectView.m in Sources */,
+				1CE241242713CB73003EB6D9 /* GXSMyKaopingViewController.m in Sources */,
 				1C0B82E12710389E0029EDF6 /* GXSAddprojectViewController.m in Sources */,
 				1C0A9FB9270063A500B7F49C /* MNCardLayout.m in Sources */,
 				1C0A9F4B270063A400B7F49C /* MNDragView.m in Sources */,

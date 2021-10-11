@@ -11,6 +11,8 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
 #import "SDWebImageManager.h"
 #import "SDImageCache.h"
 #import "GXSLoginViewController.h"
+#import "GXSMyKaopingViewController.h"
+#import "GXSHechaViewController.h"
 
 @interface GXSMineViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -116,6 +118,9 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
     }else if(indexPath.row==1){
         GXSLoginViewController *login=[[GXSLoginViewController  alloc]init];
         [self.navigationController pushViewController:login animated:YES];
+    }else if(indexPath.row==2){
+        GXSHechaViewController *kaohe=[[GXSHechaViewController  alloc]init];
+        [self.navigationController pushViewController:kaohe animated:YES];
     }else{
         
     }
