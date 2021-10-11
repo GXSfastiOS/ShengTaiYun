@@ -1,10 +1,9 @@
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'GXSShengTaiYunProject' do
 
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
 use_frameworks!
-pod 'Masonry'
 pod 'JXCategoryView', '~> 1.5.5' #https://github.com/pujiaxin33/JXCategoryView
 pod 'YYModel', '~> 1.0.4' #https://github.com/ibireme/YYModel
 pod 'IQKeyboardManager'

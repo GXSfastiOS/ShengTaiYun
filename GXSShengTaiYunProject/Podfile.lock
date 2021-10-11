@@ -2,7 +2,6 @@ PODS:
   - DZNEmptyDataSet (1.8.1)
   - IQKeyboardManager (6.5.6)
   - JXCategoryView (1.5.8)
-  - Masonry (1.1.0)
   - SDWebImage (5.10.0):
     - SDWebImage/Core (= 5.10.0)
   - SDWebImage/Core (5.10.0)
@@ -12,7 +11,6 @@ DEPENDENCIES:
   - DZNEmptyDataSet
   - IQKeyboardManager
   - JXCategoryView (~> 1.5.5)
-  - Masonry
   - SDWebImage
   - YYModel (~> 1.0.4)
 
@@ -21,7 +19,6 @@ SPEC REPOS:
     - DZNEmptyDataSet
     - IQKeyboardManager
     - JXCategoryView
-    - Masonry
     - SDWebImage
     - YYModel
 
@@ -29,10 +26,9 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   JXCategoryView: 778a620f76070d6598fd8d7239991b8da8326170
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 8950b256a057caa762bf30e19f349bac29258565
+PODFILE CHECKSUM: 83b0e41bd29b63ef9716f5f18bdc3ce3ee6d0e85
 
 COCOAPODS: 1.10.0

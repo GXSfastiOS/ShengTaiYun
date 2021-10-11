@@ -14,8 +14,7 @@
 #import "FLExtern.h"
 #import "GXSUser.h"
 #import "GXSConfiguration.h"
-
-#import <Masonry/Masonry.h>
+#import "Masonry.h"
 
 
 /// 主题颜色
