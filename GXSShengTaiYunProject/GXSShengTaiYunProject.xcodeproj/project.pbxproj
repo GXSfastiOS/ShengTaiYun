@@ -420,6 +420,7 @@
 		1C1A66152703331100E20892 /* GXSGonggaoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A66142703331100E20892 /* GXSGonggaoTableViewCell.m */; };
 		1C1E02D9270401F9000244F4 /* GXSAllHuanJingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1E02D8270401F9000244F4 /* GXSAllHuanJingViewController.m */; };
 		1C3EC16227016597000C8845 /* GXSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3EC16127016597000C8845 /* GXSTabBarViewController.m */; };
+		1C42AC1C27152E040062F680 /* GXSAllCompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C42AC1B27152E040062F680 /* GXSAllCompanyViewController.m */; };
 		1C76DB5F27117E7500F9B3EB /* GXSDanganViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C76DB5D27117E7500F9B3EB /* GXSDanganViewController.m */; };
 		1CD9C4252701C97300E418E1 /* GXSHTTPDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C4232701C97300E418E1 /* GXSHTTPDataRequest.m */; };
 		1CD9C42C2701C99700E418E1 /* GXSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C4282701C99600E418E1 /* GXSConfiguration.m */; };
@@ -1249,6 +1250,8 @@
 		1C1E02D8270401F9000244F4 /* GXSAllHuanJingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSAllHuanJingViewController.m; sourceTree = "<group>"; };
 		1C3EC16027016597000C8845 /* GXSTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSTabBarViewController.h; sourceTree = "<group>"; };
 		1C3EC16127016597000C8845 /* GXSTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSTabBarViewController.m; sourceTree = "<group>"; };
+		1C42AC1A27152E040062F680 /* GXSAllCompanyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSAllCompanyViewController.h; sourceTree = "<group>"; };
+		1C42AC1B27152E040062F680 /* GXSAllCompanyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSAllCompanyViewController.m; sourceTree = "<group>"; };
 		1C76DB5D27117E7500F9B3EB /* GXSDanganViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXSDanganViewController.m; sourceTree = "<group>"; };
 		1C76DB5E27117E7500F9B3EB /* GXSDanganViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSDanganViewController.h; sourceTree = "<group>"; };
 		1CD9C4232701C97300E418E1 /* GXSHTTPDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXSHTTPDataRequest.m; sourceTree = "<group>"; };
@@ -1602,6 +1605,8 @@
 				1C0AA0C82700765A00B7F49C /* GXSTaskViewController.m */,
 				1C0B82DF2710389E0029EDF6 /* GXSAddprojectViewController.h */,
 				1C0B82E02710389E0029EDF6 /* GXSAddprojectViewController.m */,
+				1C42AC1A27152E040062F680 /* GXSAllCompanyViewController.h */,
+				1C42AC1B27152E040062F680 /* GXSAllCompanyViewController.m */,
 			);
 			path = TaskVC;
 			sourceTree = "<group>";
@@ -3578,6 +3583,7 @@
 				1C0AA028270063A500B7F49C /* UITableView+MNHelper.m in Sources */,
 				1C0A9F5F270063A400B7F49C /* MNAssetExporter+MNExportSession.m in Sources */,
 				1C0A9FFE270063A500B7F49C /* MNImageCropController.m in Sources */,
+				1C42AC1C27152E040062F680 /* GXSAllCompanyViewController.m in Sources */,
 				1C0A9F8C270063A500B7F49C /* MNUtilities.m in Sources */,
 				1C0AA002270063A500B7F49C /* MNAsset.m in Sources */,
 				1C0AA008270063A500B7F49C /* MNAssetCell.m in Sources */,

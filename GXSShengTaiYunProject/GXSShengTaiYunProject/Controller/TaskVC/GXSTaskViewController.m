@@ -10,6 +10,7 @@ static NSString *cellId=@"TaskcellID";
 #import "GXSTaskViewController.h"
 #import "GXSTaskTableViewCell.h"
 #import "GXSAddprojectViewController.h"
+#import "GXSAllCompanyViewController.h"
 
 @interface GXSTaskViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 @property (nonatomic,strong) UITableView *tableView;
@@ -121,7 +122,8 @@ static NSString *cellId=@"TaskcellID";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row==0) {
-      
+        GXSAllCompanyViewController *all=[[GXSAllCompanyViewController alloc]init];
+        [self.navigationController pushViewController:all animated:YES];
     }else if(indexPath.row==1){
  
     }else{

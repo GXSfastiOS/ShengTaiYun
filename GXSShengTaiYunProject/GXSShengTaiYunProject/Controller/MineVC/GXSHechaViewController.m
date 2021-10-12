@@ -16,6 +16,8 @@ static NSString * cellIdentifier=@"HCtableCellIdentfier";
 
 @implementation GXSHechaViewController
 
+#pragma mark -lifeCycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
