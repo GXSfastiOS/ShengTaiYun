@@ -1583,17 +1583,14 @@
 			children = (
 				1C0AA0CA270076D100B7F49C /* GXSMineViewController.h */,
 				1C0AA0CB270076D100B7F49C /* GXSMineViewController.m */,
-<<<<<<< HEAD
 				08B39CF42712BB6100EF9482 /* GXSUSInfoViewController.h */,
 				08B39CF52712BB6100EF9482 /* GXSUSInfoViewController.m */,
-=======
 				1CE241222713CB73003EB6D9 /* GXSMyKaopingViewController.h */,
 				1CE241232713CB73003EB6D9 /* GXSMyKaopingViewController.m */,
 				1CE241252713D1B5003EB6D9 /* GXSKaoheListViewController.h */,
 				1CE241262713D1B5003EB6D9 /* GXSKaoheListViewController.m */,
 				1CE2412B271412C7003EB6D9 /* GXSHechaViewController.h */,
 				1CE2412C271412C7003EB6D9 /* GXSHechaViewController.m */,
->>>>>>> e4424cdc749b69ba6b8e5d05fb5eeea1a469228c
 			);
 			path = MineVC;
 			sourceTree = "<group>";
