@@ -54,5 +54,4 @@ static GXSTabBarViewController *_tabBarController;
 }
 
 
-
 @end

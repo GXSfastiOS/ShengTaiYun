@@ -15,6 +15,10 @@
 @property (nonatomic,strong)MNAdsorbView *headerView;
 //登录视图
 @property (nonatomic,strong)UIView *loginView;
+//登录视图
+@property (nonatomic,strong)UITextField *zhanghaoText;
+//登录视图
+@property (nonatomic,strong)UITextField *passworldText;
 @end
 
 
@@ -94,7 +98,9 @@
     zhangHaoText.borderStyle=UITextBorderStyleNone;
     zhangHaoText.centerY_mn=zhangHaoLab.centerY_mn;
     [zhangHaoView addSubview:zhangHaoText];
+    self.zhanghaoText=zhangHaoText;
     
+
     //密码
     UIView *passworldView = [[UIView alloc] init];
     passworldView.frame = CGRectMake(18.5f,zhangHaoView.bottom_mn+20.f,self.loginView.width_mn-37.f,45);
@@ -109,6 +115,7 @@
     passworldText.borderStyle=UITextBorderStyleNone;
     passworldText.centerY_mn=passworldLab.centerY_mn;
     [passworldView addSubview:passworldText];
+    self.passworldText=passworldText;
     
     //记住密码
     UIImageView *remberImg=[[UIImageView alloc]initWithFrame:CGRectMake(37.5f, passworldView.bottom_mn+14.f, 10.5f,10.5f)];
@@ -185,7 +192,20 @@
 }
 
 - (void)loginInfo{
-    
+    GXSHTTPDataRequest *requst=[[GXSHTTPDataRequest alloc]init];
+    requst.cachePolicy = MNURLDataCachePolicyNever;
+    requst.method = MNURLHTTPMethodGet;
+    requst.url=URL_HANDING(@"/app/login/login");
+    requst.body=@{@"mobile":self.zhanghaoText.text,@"pwd":self.passworldText.text};
+    @weakify(self);
+    [requst loadData:^{
+        @strongify(self);
+        [self.view showActivityDialog:@"请稍后"];
+    } completion:^(MNURLResponse * _Nonnull response) {
+        if ((response.code=MNURLResponseCodeSucceed)) {
+            [self.view closeDialog];
+        }
+    }];
 }
 
 -  (void)registerInfo{
@@ -195,6 +215,15 @@
     }];
     regsiter.layer.cornerRadius=11.5f;
     [self.scrollView addSubview:regsiter];
+}
+
+- (void)requestInfo:(NSInteger )type{
+//    GXSHTTPDataRequest *requst=[[GXSHTTPDataRequest alloc]init];
+//    requst.url=URL_HANDING(@"/app/login/login");
+//    requst.body=@{@"mobile":self.}
+//    [requst loadData:nil completion:^(MNURLResponse * _Nonnull response) {
+//
+//    }];
 }
 
 #pragma mark - UITextViewDelegate

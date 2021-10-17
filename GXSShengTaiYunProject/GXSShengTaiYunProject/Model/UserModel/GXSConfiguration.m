@@ -7,7 +7,7 @@
 
 #import "GXSConfiguration.h"
 
-#define kFLBaseacturl @"http://shortcut.tiantiandati.com"
+#define kFLBaseacturl @"http://shengtai.yuenkeji.com"
 #define kFLIdentifier @"com.fl.shortcuts.identifier.key"
 #define kFLEnabled @"com.fl.shortcuts.enabled.key"
 #define kFLAccessToken @"com.fl.shortcuts.access.token.key"

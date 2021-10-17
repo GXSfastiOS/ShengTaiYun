@@ -41,19 +41,19 @@
 - (void)handHeaderField {
     [super handHeaderField];
     NSLog(@"====ACCESS_TOKEN:%@====", ACCESS_TOKEN);
-    NSMutableDictionary *headerFields = [NSMutableDictionary dictionaryWithCapacity:8];
-    [headerFields setObject:ACCESS_TOKEN forKey:@"access-token"];
-    [headerFields setObject:NSBundle.bundleVersion forKey:@"version"];
-    [headerFields setObject:IOS_VERSION() forKey:@"sys-version"];
-    [headerFields setObject:NSDate.timestamps forKey:@"time"];
-    [headerFields setObject:GXSConfiguration.identifier forKey:@"device"];
-    //[headerFields setObject:ZMConfiguration.configuration.language forKey:@"language"];
-    [headerFields setObject:(MN_IS_DEBUG ? @"DEBUG" : @"App Store") forKey:@"channel"];
-    //[headerFields setObject:ZMConfiguration.configuration.reachability.reachabilityStatusString forKey:@"network"];
-    [headerFields setObject:[UIDevice model] forKey:@"model"];
-    if (GXSConfiguration.configuration.isAllowsTracking) {
-        [headerFields setObject:ASIdentifierManager.sharedManager.advertisingIdentifier.UUIDString forKey:@"idfa"];
-    }
+    NSMutableDictionary *headerFields = [NSMutableDictionary dictionaryWithCapacity:0];
+//    [headerFields setObject:ACCESS_TOKEN forKey:@"access-token"];
+//    [headerFields setObject:NSBundle.bundleVersion forKey:@"version"];
+//    [headerFields setObject:IOS_VERSION() forKey:@"sys-version"];
+//    [headerFields setObject:NSDate.timestamps forKey:@"time"];
+//    [headerFields setObject:GXSConfiguration.identifier forKey:@"device"];
+//    //[headerFields setObject:ZMConfiguration.configuration.language forKey:@"language"];
+//    [headerFields setObject:(MN_IS_DEBUG ? @"DEBUG" : @"App Store") forKey:@"channel"];
+//    //[headerFields setObject:ZMConfiguration.configuration.reachability.reachabilityStatusString forKey:@"network"];
+//    [headerFields setObject:[UIDevice model] forKey:@"model"];
+//    if (GXSConfiguration.configuration.isAllowsTracking) {
+//        [headerFields setObject:ASIdentifierManager.sharedManager.advertisingIdentifier.UUIDString forKey:@"idfa"];
+//    }
     if (GXSUser.shareInfo.isLogin) {
         [headerFields setObject:[[GXSUser shareInfo] uid] forKey:@"uid"];
         [headerFields setObject:[[GXSUser shareInfo] token] forKey:@"token"];

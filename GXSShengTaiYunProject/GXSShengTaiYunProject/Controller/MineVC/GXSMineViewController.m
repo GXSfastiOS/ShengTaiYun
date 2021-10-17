@@ -47,9 +47,9 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
     UIScrollView *scrollView = [UIScrollView scrollViewWithFrame:self.contentView.bounds delegate:nil];
     [self.contentView addSubview:scrollView];
     self.scrollView = scrollView;
-    scrollView.backgroundColor=UIColor.blueColor;
+    scrollView.backgroundColor=[UIColor colorWithHex:@"#F5F6F5"];
     
-    UIImage *headerImage = [UIImage imageNamed:@"login_header"];
+    UIImage *headerImage = [UIImage imageNamed:@"bg"];
     CGSize headerSize = CGSizeMultiplyToWidth(headerImage.size, scrollView.width_mn);
     MNAdsorbView *headerView = [[MNAdsorbView alloc] initWithFrame:CGRectMake(0.f, 0.f, scrollView.width_mn, headerSize.height)];
     headerView.imageView.image = headerImage;
@@ -187,7 +187,7 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
 
 - (NSArray *)imageArray{
     if (!_imageArray) {
-        _imageArray=[[NSArray alloc]initWithObjects:@"login_phone",@"login_phone",@"login_phone",@"login_phone",@"login_phone",@"login_phone",nil];
+        _imageArray=[[NSArray alloc]initWithObjects:@"me_icon_f",@"me_icon_e",@"me_icon_d",@"me_icon_c",@"me_icon_b",@"me_icon_a",nil];
     }
     return  _imageArray;
 }
@@ -195,7 +195,7 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
 
 -(UITableView *)tableView{
     if (!_tableView) {
-        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(30.f, self.headerView.height_mn-50.f, MN_SCREEN_WIDTH-60.f, 350.f) style:UITableViewStylePlain];
+        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(30.f, self.headerView.height_mn-50.f, MN_SCREEN_WIDTH-60.f, 360.f) style:UITableViewStylePlain];
         _tableView.delegate               =self;
         _tableView.dataSource             =self;
         _tableView.layer.cornerRadius     =10.f;
