@@ -30,7 +30,13 @@
 //    UIStoryboard *launchScreenStory = [UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil];
 //    UIViewController *startControll = [launchScreenStory instantiateViewControllerWithIdentifier:@"GXSLaunchView"];
 //    self.window.rootViewController = startControll;
-    
+    // 要使用百度地图，请先启动BaiduMapManager
+    BMKMapManager *mapManager = [[BMKMapManager alloc] init];
+    // 如果要关注网络及授权验证事件，请设定generalDelegate参数
+    BOOL ret = [mapManager start:@"在此处输入您的授权AK"  generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"启动引擎失败");
+    }
     //加载主页面
     [self initViewController];
     return YES;

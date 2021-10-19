@@ -2,19 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>需要您的同意保存图片</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>需要使用定位获取位置信息</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>需要使用定位获取位置信息</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>需要打开相册选取照片,发布动态或消息</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -33,6 +20,19 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>需要使用定位获取当前位置信息以显示内容</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>需要使用定位获取当前位置信息以显示内容</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>需要您的同意保存图片</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>需要打开相册选取照片,发布动态或消息</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

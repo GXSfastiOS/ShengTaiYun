@@ -419,7 +419,7 @@
 		1C1A661127032FDA00E20892 /* GXSGonggaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A661027032FDA00E20892 /* GXSGonggaoViewController.m */; };
 		1C1A66152703331100E20892 /* GXSGonggaoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A66142703331100E20892 /* GXSGonggaoTableViewCell.m */; };
 		1C1E02D9270401F9000244F4 /* GXSAllHuanJingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1E02D8270401F9000244F4 /* GXSAllHuanJingViewController.m */; };
-		1C3EC16227016597000C8845 /* GXSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3EC16127016597000C8845 /* GXSTabBarViewController.m */; };
+		1C3EC16227016597000C8845 /* GXSTabBarViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C3EC16127016597000C8845 /* GXSTabBarViewController.mm */; };
 		1C42AC1C27152E040062F680 /* GXSAllCompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C42AC1B27152E040062F680 /* GXSAllCompanyViewController.m */; };
 		1C76DB5F27117E7500F9B3EB /* GXSDanganViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C76DB5D27117E7500F9B3EB /* GXSDanganViewController.m */; };
 		1CD9C4252701C97300E418E1 /* GXSHTTPDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C4232701C97300E418E1 /* GXSHTTPDataRequest.m */; };
@@ -441,6 +441,17 @@
 		1CE24153271459BE003EB6D9 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE24149271459BE003EB6D9 /* MASViewConstraint.m */; };
 		1CE24154271459BE003EB6D9 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2414A271459BE003EB6D9 /* MASViewAttribute.m */; };
 		1CF12EEA2704506F00048BCA /* GXSShaixuanAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF12EE92704506F00048BCA /* GXSShaixuanAlertView.m */; };
+		1CF5E51A271E5E6B001FBAA1 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF5E518271E5E6A001FBAA1 /* libssl.a */; };
+		1CF5E51B271E5E6B001FBAA1 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF5E519271E5E6B001FBAA1 /* libcrypto.a */; };
+		1CF5E51D271E5EB8001FBAA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF5E51C271E5EB7001FBAA1 /* CoreGraphics.framework */; };
+		1CF5E51F271E5EC2001FBAA1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF5E51E271E5EC2001FBAA1 /* CoreLocation.framework */; };
+		1CF5E521271E5EE7001FBAA1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF5E520271E5EE1001FBAA1 /* libsqlite3.0.tbd */; };
+		1CF5E523271E5EFD001FBAA1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF5E522271E5EFD001FBAA1 /* OpenGLES.framework */; };
+		1CF5E525271E5F0A001FBAA1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF5E524271E5F09001FBAA1 /* QuartzCore.framework */; };
+		1CF5E526271E5F4D001FBAA1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF5E524271E5F09001FBAA1 /* QuartzCore.framework */; };
+		1CF5E528271E5F67001FBAA1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF5E527271E5F67001FBAA1 /* Security.framework */; };
+		1CF5E52A271E5F6F001FBAA1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF5E529271E5F6E001FBAA1 /* SystemConfiguration.framework */; };
+		1CF5E52C271E60C7001FBAA1 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CF5E52B271E60C7001FBAA1 /* mapapi.bundle */; };
 		BC75AB25814AA4F16AD81A26 /* Pods_GXSShengTaiYunProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6823FC11A80C47C8DC205FE7 /* Pods_GXSShengTaiYunProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -1249,7 +1260,7 @@
 		1C1E02D7270401F9000244F4 /* GXSAllHuanJingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSAllHuanJingViewController.h; sourceTree = "<group>"; };
 		1C1E02D8270401F9000244F4 /* GXSAllHuanJingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSAllHuanJingViewController.m; sourceTree = "<group>"; };
 		1C3EC16027016597000C8845 /* GXSTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSTabBarViewController.h; sourceTree = "<group>"; };
-		1C3EC16127016597000C8845 /* GXSTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSTabBarViewController.m; sourceTree = "<group>"; };
+		1C3EC16127016597000C8845 /* GXSTabBarViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GXSTabBarViewController.mm; sourceTree = "<group>"; };
 		1C42AC1A27152E040062F680 /* GXSAllCompanyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSAllCompanyViewController.h; sourceTree = "<group>"; };
 		1C42AC1B27152E040062F680 /* GXSAllCompanyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSAllCompanyViewController.m; sourceTree = "<group>"; };
 		1C76DB5D27117E7500F9B3EB /* GXSDanganViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXSDanganViewController.m; sourceTree = "<group>"; };
@@ -1297,6 +1308,16 @@
 		1CE2414A271459BE003EB6D9 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		1CF12EE82704506F00048BCA /* GXSShaixuanAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSShaixuanAlertView.h; sourceTree = "<group>"; };
 		1CF12EE92704506F00048BCA /* GXSShaixuanAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSShaixuanAlertView.m; sourceTree = "<group>"; };
+		1CF5E518271E5E6A001FBAA1 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		1CF5E519271E5E6B001FBAA1 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		1CF5E51C271E5EB7001FBAA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1CF5E51E271E5EC2001FBAA1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1CF5E520271E5EE1001FBAA1 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		1CF5E522271E5EFD001FBAA1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		1CF5E524271E5F09001FBAA1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1CF5E527271E5F67001FBAA1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1CF5E529271E5F6E001FBAA1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1CF5E52B271E60C7001FBAA1 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
 		491CA2546BB1478C316D110A /* Pods-GXSShengTaiYunProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GXSShengTaiYunProject.debug.xcconfig"; path = "Target Support Files/Pods-GXSShengTaiYunProject/Pods-GXSShengTaiYunProject.debug.xcconfig"; sourceTree = "<group>"; };
 		6823FC11A80C47C8DC205FE7 /* Pods_GXSShengTaiYunProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GXSShengTaiYunProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFEE66F22FD720853C388B2 /* Pods-GXSShengTaiYunProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GXSShengTaiYunProject.release.xcconfig"; path = "Target Support Files/Pods-GXSShengTaiYunProject/Pods-GXSShengTaiYunProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -1309,10 +1330,13 @@
 			files = (
 				1C0AA06F270063A500B7F49C /* dav1d.framework in Frameworks */,
 				1C0AA06A270063A500B7F49C /* libtheoradec.framework in Frameworks */,
+				1CF5E51A271E5E6B001FBAA1 /* libssl.a in Frameworks */,
 				1C0AA0BF2700643E00B7F49C /* GameController.framework in Frameworks */,
+				1CF5E51D271E5EB8001FBAA1 /* CoreGraphics.framework in Frameworks */,
 				1C0AA073270063A500B7F49C /* libtheoraenc.framework in Frameworks */,
 				1C0AA06C270063A500B7F49C /* libtheora.framework in Frameworks */,
 				1C0AA075270063A500B7F49C /* libogg.framework in Frameworks */,
+				1CF5E525271E5F0A001FBAA1 /* QuartzCore.framework in Frameworks */,
 				1C0AA0AC270063A500B7F49C /* libmp3lame.a in Frameworks */,
 				1C0AA07C270063A500B7F49C /* snappy.framework in Frameworks */,
 				1C0AA092270063A500B7F49C /* twolame.framework in Frameworks */,
@@ -1327,6 +1351,7 @@
 				1C0AA095270063A500B7F49C /* xvidcore.framework in Frameworks */,
 				1C0AA087270063A500B7F49C /* ffmpegkit.framework in Frameworks */,
 				1C0AA065270063A500B7F49C /* libswresample.framework in Frameworks */,
+				1CF5E523271E5EFD001FBAA1 /* OpenGLES.framework in Frameworks */,
 				1C0AA076270063A500B7F49C /* harfbuzz.framework in Frameworks */,
 				1C0AA07B270063A500B7F49C /* libavdevice.framework in Frameworks */,
 				1C0AA088270063A500B7F49C /* libopencore-amrnb.framework in Frameworks */,
@@ -1351,20 +1376,26 @@
 				1C0AA071270063A500B7F49C /* libavutil.framework in Frameworks */,
 				1C0AA085270063A500B7F49C /* libvidstab.framework in Frameworks */,
 				1C0AA074270063A500B7F49C /* libvorbisenc.framework in Frameworks */,
+				1CF5E521271E5EE7001FBAA1 /* libsqlite3.0.tbd in Frameworks */,
 				1C0AA063270063A500B7F49C /* libxml2.framework in Frameworks */,
 				1C0AA0B9270063EF00B7F49C /* libiconv.tbd in Frameworks */,
 				1C0AA07A270063A500B7F49C /* libswscale.framework in Frameworks */,
+				1CF5E51F271E5EC2001FBAA1 /* CoreLocation.framework in Frameworks */,
 				1C0AA0C32700646300B7F49C /* Accelerate.framework in Frameworks */,
 				1C0AA078270063A500B7F49C /* giflib.framework in Frameworks */,
+				1CF5E526271E5F4D001FBAA1 /* QuartzCore.framework in Frameworks */,
 				1C0AA081270063A500B7F49C /* libass.framework in Frameworks */,
 				1C0AA086270063A500B7F49C /* libhogweed.framework in Frameworks */,
 				1C0AA064270063A500B7F49C /* lame.framework in Frameworks */,
+				1CF5E52A271E5F6F001FBAA1 /* SystemConfiguration.framework in Frameworks */,
+				1CF5E51B271E5E6B001FBAA1 /* libcrypto.a in Frameworks */,
 				1C0AA084270063A500B7F49C /* tiff.framework in Frameworks */,
 				1C0AA06E270063A500B7F49C /* libavformat.framework in Frameworks */,
 				1C0AA094270063A500B7F49C /* libvorbisfile.framework in Frameworks */,
 				1C0AA0B7270063DE00B7F49C /* libc++.tbd in Frameworks */,
 				1C0AA08A270063A500B7F49C /* kvazaar.framework in Frameworks */,
 				1C0AA06D270063A500B7F49C /* libnettle.framework in Frameworks */,
+				1CF5E528271E5F67001FBAA1 /* Security.framework in Frameworks */,
 				1C0AA089270063A500B7F49C /* expat.framework in Frameworks */,
 				1C0AA0BD2700642D00B7F49C /* CoreMotion.framework in Frameworks */,
 				1C0AA06B270063A500B7F49C /* libwebpmux.framework in Frameworks */,
@@ -1522,7 +1553,7 @@
 				1C0A9BB927005FFB00B7F49C /* AppDelegate.h */,
 				1C0A9BBA27005FFB00B7F49C /* AppDelegate.m */,
 				1C3EC16027016597000C8845 /* GXSTabBarViewController.h */,
-				1C3EC16127016597000C8845 /* GXSTabBarViewController.m */,
+				1C3EC16127016597000C8845 /* GXSTabBarViewController.mm */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1576,6 +1607,7 @@
 		1C0A9BF4270062D500B7F49C /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				1CF5E513271E5CFA001FBAA1 /* BaiduMap */,
 				1CE24131271459BE003EB6D9 /* Masonry */,
 			);
 			path = Vender;
@@ -3288,6 +3320,13 @@
 		1C0AA0B3270063C400B7F49C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1CF5E529271E5F6E001FBAA1 /* SystemConfiguration.framework */,
+				1CF5E527271E5F67001FBAA1 /* Security.framework */,
+				1CF5E524271E5F09001FBAA1 /* QuartzCore.framework */,
+				1CF5E522271E5EFD001FBAA1 /* OpenGLES.framework */,
+				1CF5E520271E5EE1001FBAA1 /* libsqlite3.0.tbd */,
+				1CF5E51E271E5EC2001FBAA1 /* CoreLocation.framework */,
+				1CF5E51C271E5EB7001FBAA1 /* CoreGraphics.framework */,
 				1C0AA0C22700646200B7F49C /* Accelerate.framework */,
 				1C0AA0C02700644D00B7F49C /* VideoToolbox.framework */,
 				1C0AA0BE2700643E00B7F49C /* GameController.framework */,
@@ -3351,6 +3390,16 @@
 				1CE2414A271459BE003EB6D9 /* MASViewAttribute.m */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		1CF5E513271E5CFA001FBAA1 /* BaiduMap */ = {
+			isa = PBXGroup;
+			children = (
+				1CF5E52B271E60C7001FBAA1 /* mapapi.bundle */,
+				1CF5E519271E5E6B001FBAA1 /* libcrypto.a */,
+				1CF5E518271E5E6A001FBAA1 /* libssl.a */,
+			);
+			path = BaiduMap;
 			sourceTree = "<group>";
 		};
 		2D02E2218E28E43CD7E754D4 /* Pods */ = {
@@ -3467,6 +3516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C0AA019270063A500B7F49C /* MNCityPicker.plist in Resources */,
+				1CF5E52C271E60C7001FBAA1 /* mapapi.bundle in Resources */,
 				1C0A9BC927005FFE00B7F49C /* LaunchScreen.storyboard in Resources */,
 				1C0AA09A270063A500B7F49C /* MJRefresh.bundle in Resources */,
 				1C0A9BC627005FFE00B7F49C /* Assets.xcassets in Resources */,
@@ -3628,7 +3678,7 @@
 				1C0AA02D270063A500B7F49C /* UIScreen+MNHelper.m in Sources */,
 				1C0A9F68270063A400B7F49C /* MNAuthenticator.m in Sources */,
 				1CD9C4252701C97300E418E1 /* GXSHTTPDataRequest.m in Sources */,
-				1C3EC16227016597000C8845 /* GXSTabBarViewController.m in Sources */,
+				1C3EC16227016597000C8845 /* GXSTabBarViewController.mm in Sources */,
 				1C0AA05B270063A500B7F49C /* NSAttributedString+MNHelper.m in Sources */,
 				1C0A9F96270063A500B7F49C /* MNSegmentViewController.m in Sources */,
 				1C0A9F87270063A500B7F49C /* MNNetworkReachability.m in Sources */,
@@ -4080,6 +4130,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GXSShengTaiYunProject/MNKit/vendor/FFmpeg",
+					"$(PROJECT_DIR)/GXSShengTaiYunProject/Vender/BaiduMap",
 				);
 				GCC_PREFIX_HEADER = GXSShengTaiYunProject/Resource/GXSPrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
@@ -4101,9 +4152,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/GXSShengTaiYunProject/MNKit/vendor/MNAudioConvert/lame",
 					"$(PROJECT_DIR)/GXSShengTaiYunProject/MNKit/vendor/MNAudioConvert/VoiceConvert/lib",
+					"$(PROJECT_DIR)/GXSShengTaiYunProject/Vender/BaiduMap",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = GXSShengTaiYun.GXSShengTaiYunProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GXSShengTaiYun.GXSShengTaiYunProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
@@ -4122,6 +4174,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GXSShengTaiYunProject/MNKit/vendor/FFmpeg",
+					"$(PROJECT_DIR)/GXSShengTaiYunProject/Vender/BaiduMap",
 				);
 				GCC_PREFIX_HEADER = GXSShengTaiYunProject/Resource/GXSPrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
@@ -4143,9 +4196,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/GXSShengTaiYunProject/MNKit/vendor/MNAudioConvert/lame",
 					"$(PROJECT_DIR)/GXSShengTaiYunProject/MNKit/vendor/MNAudioConvert/VoiceConvert/lib",
+					"$(PROJECT_DIR)/GXSShengTaiYunProject/Vender/BaiduMap",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = GXSShengTaiYun.GXSShengTaiYunProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GXSShengTaiYun.GXSShengTaiYunProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
