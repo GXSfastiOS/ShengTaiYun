@@ -19,6 +19,10 @@
 @property (nonatomic,strong)UITextField *zhanghaoText;
 //登录视图
 @property (nonatomic,strong)UITextField *passworldText;
+//记住密码
+@property (nonatomic,assign)BOOL isRember;
+//记住密码图片
+@property (nonatomic,strong)UIImageView *isRemberImg;
 @end
 
 
@@ -34,6 +38,13 @@
 -(void)createView{
     [super createView];
     self.navigationBar.hidden=YES;
+    
+    // 获取一个NSUserDefaults引用：
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *zhanghao=[userDefaults objectForKey:@"zhanghao"];
+    NSString *passworld=[userDefaults objectForKey:@"passworld"];
+    self.isRember=[userDefaults objectForKey:@"isRember"];
+    
     UIScrollView *scrollView = [UIScrollView scrollViewWithFrame:self.contentView.bounds delegate:nil];
     [self.contentView addSubview:scrollView];
     self.scrollView = scrollView;
@@ -96,6 +107,7 @@
     
     UITextField *zhangHaoText=[UITextField textFieldWithFrame:CGRectMake(zhangHaoLab.right_mn+15.f, 16.f, zhangHaoView.width_mn-80.f, 30.f) font:UIFontSystem(12.f) placeholder:@"请输入您的公司全称/身份账号名" delegate:self];
     zhangHaoText.borderStyle=UITextBorderStyleNone;
+    zhangHaoText.text=zhanghao;
     zhangHaoText.centerY_mn=zhangHaoLab.centerY_mn;
     [zhangHaoView addSubview:zhangHaoText];
     self.zhanghaoText=zhangHaoText;
@@ -112,6 +124,7 @@
     [passworldView addSubview:passworldLab];
     
     UITextField *passworldText=[UITextField textFieldWithFrame:CGRectMake(zhangHaoLab.right_mn+15.f, 16.f, zhangHaoView.width_mn-80.f, 30.f) font:UIFontSystem(12.f) placeholder:@"请输入登录密码" delegate:self];
+    passworldText.text=passworld;
     passworldText.borderStyle=UITextBorderStyleNone;
     passworldText.centerY_mn=passworldLab.centerY_mn;
     [passworldView addSubview:passworldText];
@@ -119,11 +132,18 @@
     
     //记住密码
     UIImageView *remberImg=[[UIImageView alloc]initWithFrame:CGRectMake(37.5f, passworldView.bottom_mn+14.f, 10.5f,10.5f)];
-    remberImg.image=[UIImage imageNamed:@"icon"];
+    remberImg.image=[UIImage imageNamed:self.isRember?@"icon":@""];
+    remberImg.userInteractionEnabled=YES;
+    self.isRemberImg=remberImg;
     [loginView addSubview:remberImg];
     
     UILabel *remberLab=[UILabel labelWithFrame:CGRectMake(remberImg.right_mn+5.f, passworldView.bottom_mn+14.f, 50.f, 13.f) text:@"记住密码" textColor:[UIColor colorWithHex:@"#A8B2B9"] font:UIFontSystem(12.f)];
     [loginView addSubview:remberLab];
+    remberLab.userInteractionEnabled=YES;
+    
+    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(remberClick)];
+    [remberImg addGestureRecognizer:tap];
+    [remberLab addGestureRecognizer:tap];
     
     UIButton *changePassworld=[UIButton buttonWithFrame:CGRectZero image:nil title:@"更改密码" titleColor:[UIColor colorWithHex:@"#379690"] titleFont:UIFontSystem(12.f)];
     changePassworld.size_mn=CGSizeMake(50.f, 13.f);
@@ -191,10 +211,32 @@
     [self.scrollView addSubview:forgetView];
 }
 
+- (void)remberClick{
+    self.isRember=!self.isRember;
+    if (self.isRember) {
+        // 获取一个NSUserDefaults引用：
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        // 保存数据
+        [userDefaults setObject:self.zhanghaoText.text forKey:@"zhanghao"];
+        [userDefaults setObject:self.passworldText.text forKey:@"passworld"];
+        [userDefaults setInteger:self.isRember forKey:@"isRember"];
+        [userDefaults synchronize];
+        self.isRemberImg.image=[UIImage imageNamed:@"icon"];
+    }else{
+        // 获取一个NSUserDefaults引用：
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults removeObjectForKey:@"zhanghao"];
+        [userDefaults removeObjectForKey:@"passworld"];
+        [userDefaults removeObjectForKey:@"isRember"];
+        [userDefaults synchronize];
+        self.isRemberImg.image=[UIImage imageNamed:@""];
+    }
+}
+
 - (void)loginInfo{
     GXSHTTPDataRequest *requst=[[GXSHTTPDataRequest alloc]init];
     requst.cachePolicy = MNURLDataCachePolicyNever;
-    requst.method = MNURLHTTPMethodGet;
+    requst.method = MNURLHTTPMethodPost;
     requst.url=URL_HANDING(@"/app/login/login");
     requst.body=@{@"mobile":self.zhanghaoText.text,@"pwd":self.passworldText.text};
     @weakify(self);
@@ -202,8 +244,10 @@
         @strongify(self);
         [self.view showActivityDialog:@"请稍后"];
     } completion:^(MNURLResponse * _Nonnull response) {
-        if ((response.code=MNURLResponseCodeSucceed)) {
+        if (response.code==MNURLResponseCodeSucceed) {
             [self.view closeDialog];
+        }else{
+            [self.view showErrorDialog:response.message];
         }
     }];
 }

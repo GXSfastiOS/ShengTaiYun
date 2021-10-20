@@ -16,7 +16,7 @@
 #import "GXSConfiguration.h"
 #import "Masonry.h"
 // 引入base相关所有的头文件
-#import <BaiduMapAPI_Base/BMKBaseComponent.h>
+//#import <BaiduMapAPI_Base/BMKBaseComponent.h>
 
 
 /// 主题颜色

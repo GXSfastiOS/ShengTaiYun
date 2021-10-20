@@ -11,9 +11,9 @@
 #import "GXSNewProjectViewController.h"
 #import "GXSDanganViewController.h"
 #import "GXSShengTaiHeChaViewController.h"
-#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+//#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
 
-@interface GXSHomeViewController ()<BMKMapViewDelegate>
+@interface GXSHomeViewController ()//<BMKMapViewDelegate>
 //btnArray
 @property (nonatomic,strong)NSArray *btnArray;
 //功能展示view
@@ -21,7 +21,7 @@
 //隐藏或展示
 @property (nonatomic,assign)BOOL isShow;
 //地图
-@property (nonatomic, strong) BMKMapView *mapView;
+//@property (nonatomic, strong) BMKMapView *mapView;
 @end
 
 @implementation GXSHomeViewController
@@ -33,29 +33,29 @@
     [self setViewUp];
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [_mapView viewWillAppear];
-}
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [_mapView viewWillDisappear];
-}
+//-(void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    [_mapView viewWillAppear];
+//}
+//-(void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewWillDisappear:animated];
+//    [_mapView viewWillDisappear];
+//}
 
 #pragma  mark -mothod
 
 - (void)setViewUp{
 //    self.contentView.backgroundColor=UIColor.orangeColor;
     
-    _mapView = [[BMKMapView alloc]initWithFrame:self.view.bounds];
-    _mapView.delegate = self;
-    //当前地图缩放等级
-    [_mapView setZoomLevel:17];
-    //显示定位图层
-    _mapView.showsUserLocation = YES;
-    [self.contentView addSubview:_mapView];
+//    _mapView = [[BMKMapView alloc]initWithFrame:self.view.bounds];
+//    _mapView.delegate = self;
+//    //当前地图缩放等级
+//    [_mapView setZoomLevel:17];
+//    //显示定位图层
+//    _mapView.showsUserLocation = YES;
+//    [self.contentView addSubview:_mapView];
     
     self.isShow=NO;
     UIView *btnView=[[UIView alloc]init];
