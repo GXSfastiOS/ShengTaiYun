@@ -127,6 +127,14 @@
 
 
 - (void)changeInfo{
+    if (self.zhangHaoText.text.length<=0 || self.oldPassworldText.text.length<=0 ||self.passworldTextTwo.text.length<=0) {
+        [self showInfoDialog:@"输入不能为空"];
+        return;
+    }
+    if (![self.passworldText.text isEqualToString:self.passworldTextTwo.text]) {
+        [self showInfoDialog:@"两次密码输入不一致"];
+        return;
+    }
     if (self.ensureHandler) {
         self.ensureHandler(self.zhangHaoText.text,self.oldPassworldText.text, self.passworldText.text, self.passworldTextTwo.text);
     }

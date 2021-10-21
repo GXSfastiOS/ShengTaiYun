@@ -77,6 +77,26 @@ static NSString *cellId=@"TaskcellID";
 
 #pragma mark - event
 
+- (void)getDataInfo{
+    GXSHTTPDataRequest *requst=[[GXSHTTPDataRequest alloc]init];
+    requst.cachePolicy = MNURLDataCachePolicyNever;
+    requst.method = MNURLHTTPMethodPost;
+    requst.url=URL_HANDING(@"/app/login/login");
+    requst.body=@{@"mobile":@""};
+    @weakify(self);
+    [requst loadData:^{
+        @strongify(self);
+        [self.view showActivityDialog:@"请稍后"];
+    } completion:^(MNURLResponse * _Nonnull response) {
+        if (response.code==MNURLResponseCodeSucceed) {
+            [self.view closeDialog];
+           
+        }else{
+            [self.view showErrorDialog:response.message];
+        }
+    }];
+}
+
 - (void)nowTask:(UIButton *)btn{
     if (btn==self.nowTaskBtn) {
         self.nowTaskBtn.titleLabel.font=[UIFont systemFontOfSize:18.f];

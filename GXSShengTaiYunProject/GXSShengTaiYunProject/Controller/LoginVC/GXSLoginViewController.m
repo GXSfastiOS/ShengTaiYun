@@ -206,6 +206,23 @@
 - (void)changePassworld{
     ForGetPassworldView *forgetView=[[ForGetPassworldView alloc]initWithFrame:CGRectMake(17.5,self.headerView.bottom_mn-50.f,self.view.width_mn-35.f,410) returnValue:^(NSString * _Nonnull zhanghao, NSString * _Nonnull oldPassworld, NSString * _Nonnull passworld, NSString * _Nonnull sumbitPassworld) {
         NSLog(@"重置密码事件");
+        GXSHTTPDataRequest *requst=[[GXSHTTPDataRequest alloc]init];
+        requst.cachePolicy = MNURLDataCachePolicyNever;
+        requst.method = MNURLHTTPMethodPost;
+        requst.url=URL_HANDING(@"/app/login/login");
+        requst.body=@{@"mobile":zhanghao,@"pwds":oldPassworld,@"pwd":passworld};
+        @weakify(self);
+        [requst loadData:^{
+            @strongify(self);
+            [self.view showActivityDialog:@"请稍后"];
+        } completion:^(MNURLResponse * _Nonnull response) {
+            if (response.code==MNURLResponseCodeSucceed) {
+                [self.view closeDialog];
+                [forgetView removeFromSuperview];
+            }else{
+                [self.view showErrorDialog:response.message];
+            }
+        }];
     }];
     forgetView.layer.cornerRadius=11.5f;
     [self.scrollView addSubview:forgetView];
