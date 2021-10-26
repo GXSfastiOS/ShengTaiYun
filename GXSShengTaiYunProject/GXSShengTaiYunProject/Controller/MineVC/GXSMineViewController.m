@@ -58,21 +58,27 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
     
     //头像
     UIImageView *imageView=[[UIImageView alloc]initWithFrame:CGRectMake(30.f, 110.f, 50.f, 50.f)];
-    imageView.image=[UIImage imageNamed:@"user_img"];
+    imageView.image=[UIImage imageNamed:@"icon_defaultimg"];
     imageView.layer.cornerRadius=25.f;
     [headerView addSubview:imageView];
     self.userImg=imageView;
     
     //昵称
     UILabel *nameLab=[[UILabel alloc]initWithFrame:CGRectMake(imageView.right_mn+10.f, imageView.top_mn-5.f, MN_SCREEN_WIDTH-100.f, 20.f)];
-    nameLab.text=@"会吃鱼的猫";
+    nameLab.text=[GXSUser shareInfo].nick_name;
     nameLab.font=[UIFont systemFontOfSize:18];
     nameLab.textColor=[UIColor whiteColor];
     [scrollView addSubview:nameLab];
     
     //身份
     UILabel *IDLab=[[UILabel alloc]initWithFrame:CGRectMake(imageView.right_mn+10.f, nameLab.bottom_mn+10.f, MN_SCREEN_WIDTH-100.f, 20.f)];
-    IDLab.text=@"网格员";
+    if ([GXSUser shareInfo].type==1) {
+        IDLab.text=@"网格员";
+    }else if([GXSUser shareInfo].type==1){
+        IDLab.text=@"管理员";
+    }else{
+        IDLab.text=@"普通用户";
+    }
     IDLab.font=[UIFont systemFontOfSize:15];
     IDLab.textColor=[UIColor whiteColor];
     [scrollView addSubview:IDLab];
@@ -100,6 +106,25 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
         cell.detailTextLabel.text=@"";
     }else if(indexPath.row==4){
         cell.detailTextLabel.text=self.cacheStr;
+    }else if(indexPath.row==5){
+        GXSHTTPDataRequest *requst=[[GXSHTTPDataRequest alloc]init];
+        requst.cachePolicy = MNURLDataCachePolicyNever;
+        requst.method = MNURLHTTPMethodPost;
+        requst.url=URL_HANDING(@"/app/member/login_out");
+//        requst.body=@{@"member_id":[GXSUser shareInfo].uid,@"token":[GXSUser shareInfo].token};
+        @weakify(self);
+        [requst loadData:^{
+            @strongify(self);
+            [self.view showActivityDialog:@"请稍后"];
+        } completion:^(MNURLResponse * _Nonnull response) {
+            if (response.code==0) {
+                [self.view closeDialog];
+                [[GXSUser shareInfo] cleanUserInfo];
+            }else{
+                [self.view showErrorDialog:response.message];
+            }
+        }];
+      
     }
     return  cell;
 }

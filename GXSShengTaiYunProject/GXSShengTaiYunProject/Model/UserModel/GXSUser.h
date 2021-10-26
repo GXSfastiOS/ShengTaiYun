@@ -17,25 +17,22 @@ NS_ASSUME_NONNULL_BEGIN
 /**用户id*/
 @property (nonatomic, copy) NSString *uid;
 /**昵称*/
-@property (nonatomic, copy) NSString *nick;
+@property (nonatomic, copy) NSString *nick_name;
+/**登录名*/
+@property (nonatomic, copy) NSString *user;
 /**头像*/
-@property (nonatomic, copy) NSString *heading;
+@property (nonatomic, copy) NSString *head_pic;
 /**性别*/
 @property (nonatomic) NSInteger sex;
-/**是否VIP*/
-@property (nonatomic, getter=isVip) BOOL vip;
+/**性别*/
+@property (nonatomic) NSInteger type;
 /**手机号码*/
 @property (nonatomic, copy) NSString *mobile;
-/**小程序码*/
-@property (nonatomic, copy) NSString *miniprogramcode_url;
-/**VIP到期时间*/
-@property (nonatomic, copy) NSString *expirationTime;
-/**微信号<仅为了保存信息>*/
-@property (nonatomic, copy) NSString *wechat_number;
-/**微信二维码<仅为了保存信息>*/
-@property (nonatomic, copy) NSString *wechat_qrcode;
-/**签名<仅为了保存信息>*/
-@property (nonatomic, copy) NSString *signature;
+/**手机号码*/
+@property (nonatomic, copy) NSString *lingdao_name;
+/**手机号码*/
+@property (nonatomic, copy) NSString *wangge_name;
+
 
 /**
  用户信息实例化入口

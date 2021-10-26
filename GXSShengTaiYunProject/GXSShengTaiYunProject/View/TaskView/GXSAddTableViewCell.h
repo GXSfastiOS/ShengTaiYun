@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GXSAddTableViewCell : MNTableViewCell
 @property(nonatomic,strong)ListCellTypeModel *model;
+@property (weak, nonatomic) IBOutlet UITextField *detailText;
 @end
 
 NS_ASSUME_NONNULL_END

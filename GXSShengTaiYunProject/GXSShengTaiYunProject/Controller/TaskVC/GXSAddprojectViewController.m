@@ -14,7 +14,7 @@ static NSString *scellId=@"SelectCellID";
 #import "TAProfileSelectCell.h"
 #import "TAProfileSelectModel.h"
 
-@interface GXSAddprojectViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,TAProfileSelectDelegate>
+@interface GXSAddprojectViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,TAProfileSelectDelegate,UITextFieldDelegate>
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong) NSMutableArray *dataArray;
@@ -28,6 +28,19 @@ static NSString *scellId=@"SelectCellID";
 @property (nonatomic, strong) TAProfileSelectModel *lastProfile;
 /**发布*/
 @property (nonatomic, strong) UIButton *sumbitBtn;
+/**网格*/
+@property (nonatomic, strong) NSString *wanggeText;
+/**企业*/
+@property (nonatomic, strong) NSString *qiyeText;
+/**核查*/
+@property (nonatomic, strong) NSString *hechaText;
+/**分管*/
+@property (nonatomic, strong) NSString *fenguanText;
+/**任务*/
+@property (nonatomic, strong) NSString *renwuText;
+/**模块*/
+@property (nonatomic, strong) NSString *mokuaiText;
+
 @end
 
 @implementation GXSAddprojectViewController
@@ -252,6 +265,8 @@ static NSString *scellId=@"SelectCellID";
         GXSAddTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
         cell.model=model;
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        cell.detailText.delegate=self;
+        cell.detailText.tag=indexPath.row+66;
         return  cell;
     }else{
         UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:scellId];
@@ -266,10 +281,29 @@ static NSString *scellId=@"SelectCellID";
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row==0) {
-      
-    }else if(indexPath.row==1){
- 
+    NSArray *array=[[NSArray alloc]initWithObjects:@"选择网格",@"选择",@"网格",@"选择网格", nil];
+    if (indexPath.row==2) {
+        ListCellTypeModel *model=self.dataArray[indexPath.row];
+        @weakify(self);
+        MNActionSheet *sheet=[[MNActionSheet alloc]initWithTitle:@"选择网格" cancelButtonTitle:@"取消" otherButtonTitles:array handler:^(MNActionSheet * _Nonnull actionSheet, NSInteger buttonIndex) {
+            @strongify(self);
+            NSLog(@"%@",actionSheet.title);
+            model.datail=array[buttonIndex];
+            self.hechaText=array[buttonIndex];
+            [self.tableView reloadData];
+        }];
+        [sheet show];
+    }else if(indexPath.row==3){
+        ListCellTypeModel *model=self.dataArray[indexPath.row];
+        @weakify(self);
+        MNActionSheet *sheet=[[MNActionSheet alloc]initWithTitle:@"选择网格" cancelButtonTitle:@"取消" otherButtonTitles:array handler:^(MNActionSheet * _Nonnull actionSheet, NSInteger buttonIndex) {
+            @strongify(self);
+            NSLog(@"%@",actionSheet.title);
+            model.datail=array[buttonIndex];
+            self.fenguanText=array[buttonIndex];
+            [self.tableView reloadData];
+        }];
+        [sheet show];
     }else{
         
     }
@@ -279,16 +313,34 @@ static NSString *scellId=@"SelectCellID";
     return 44.5f;
 }
 
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    NSInteger t=textField.tag-66;
+    switch (t) {
+        case 0:
+            self.wanggeText=textField.text;
+            break;
+        case 1:
+            self.qiyeText=textField.text;
+            break;
+        case 4:
+            self.renwuText=textField.text;
+            break;
+        case 5:
+            self.mokuaiText=textField.text;
+            break;
+        default:
+            break;
+    }
+}
 
 #pragma mark - getter and setter
 
 -(UITableView *)tableView{
     if (!_tableView) {
-        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0.f, 0.f, MN_SCREEN_WIDTH, 300.f) style:UITableViewStylePlain];
+        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0.f, 0.f, MN_SCREEN_WIDTH, 280.f) style:UITableViewStylePlain];
         _tableView.delegate               =self;
         _tableView.dataSource             =self;
         _tableView.tableFooterView        = [[UIView alloc]init];
-        _tableView.backgroundColor=UIColor.redColor;
         _tableView.separatorStyle         =UITableViewCellSeparatorStyleNone;
         [_tableView registerNib:[UINib nibWithNibName:@"GXSAddTableViewCell" bundle:nil] forCellReuseIdentifier:cellId];
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:scellId];

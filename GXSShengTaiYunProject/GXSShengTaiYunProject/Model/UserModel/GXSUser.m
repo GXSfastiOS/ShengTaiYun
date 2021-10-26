@@ -41,17 +41,15 @@ static GXSUser *_user;
 - (void)updateUserInfo:(NSDictionary *)userInfo writeToFile:(BOOL)writeToFile {
     if (!userInfo) userInfo = @{};
     self.token = [NSDictionary stringValueWithDictionary:userInfo forKey:@"token" def:@""];
-    self.uid = [NSDictionary stringValueWithDictionary:userInfo forKey:@"userId" def:@""];
-    self.nick = [NSDictionary stringValueWithDictionary:userInfo forKey:@"nick" def:@""];
-    self.heading = [NSDictionary stringValueWithDictionary:userInfo forKey:@"heading" def:@""];
+    self.uid = [NSDictionary stringValueWithDictionary:userInfo forKey:@"id" def:@""];
+    self.user = [NSDictionary stringValueWithDictionary:userInfo forKey:@"nick_name" def:@""];
+    self.nick_name = [NSDictionary stringValueWithDictionary:userInfo forKey:@"nick_name" def:@""];
+    self.head_pic = [NSDictionary stringValueWithDictionary:userInfo forKey:@"head_pic" def:@""];
     self.mobile = [NSDictionary stringValueWithDictionary:userInfo forKey:@"mobile" def:@""];
-    self.expirationTime = [NSDictionary stringValueWithDictionary:userInfo forKey:@"expirationTime" def:@""];
-    self.vip = [NSDictionary boolValueWithDictionary:userInfo forKey:@"isVip"];
+    self.wangge_name = [NSDictionary stringValueWithDictionary:userInfo forKey:@"wangge_name" def:@""];
+    self.lingdao_name = [NSDictionary stringValueWithDictionary:userInfo forKey:@"lingdao_names" def:@""];
     self.sex = [NSDictionary integerValueWithDictionary:userInfo forKey:@"sex"];
-    self.miniprogramcode_url = [NSDictionary stringValueWithDictionary:userInfo forKey:@"miniprogramcode_url" def:@""];
-    self.wechat_qrcode = [NSDictionary stringValueWithDictionary:userInfo forKey:@"wechat_url" def:@""];
-    self.wechat_number = [NSDictionary stringValueWithDictionary:userInfo forKey:@"wechat_number" def:@""];
-    self.signature = [NSDictionary stringValueWithDictionary:userInfo forKey:@"sign" def:@""];
+    self.type = [NSDictionary integerValueWithDictionary:userInfo forKey:@"type"];
     if (writeToFile) {
         [NSUserDefaults synchronly:^(NSUserDefaults * _Nonnull userDefaults) {
             [userDefaults setObject:userInfo forKey:kFLUserInfo];
@@ -92,16 +90,13 @@ static GXSUser *_user;
     NSMutableDictionary *dic = @{}.mutableCopy;
     [dic setObject:self.token ? : @"" forKey:kPath(self.token)];
     [dic setObject:self.uid ? : @"" forKey:@"userId"];
-    [dic setObject:self.nick ? : @"" forKey:kPath(self.nick)];
-    [dic setObject:self.heading ? : @"" forKey:kPath(self.heading)];
+    [dic setObject:@(self.type) ? : @"" forKey:kPath(self.type)];
+    [dic setObject:self.user ? : @"" forKey:kPath(self.user)];
+    [dic setObject:self.nick_name ? : @"" forKey:kPath(self.nick_name)];
+    [dic setObject:self.head_pic ? : @"" forKey:kPath(self.head_pic)];
     [dic setObject:self.mobile ? : @"" forKey:kPath(self.mobile)];
-    [dic setObject:self.expirationTime ? : @"" forKey:kPath(self.expirationTime)];
-    [dic setObject:self.wechat_qrcode ? : @"" forKey:@"wechat_url"];
-    [dic setObject:self.wechat_number ? : @"" forKey:kPath(self.wechat_number)];
-    [dic setObject:self.miniprogramcode_url ? : @"" forKey:kPath(self.miniprogramcode_url)];
-    [dic setObject:self.signature ? : @"" forKey:@"sign"];
-    [dic setObject:@(self.isVip) forKey:kPath(self.vip)];
     [dic setObject:@(self.sex) forKey:kPath(self.sex)];
+    
     [NSUserDefaults synchronly:^(NSUserDefaults * _Nonnull userDefaults) {
         [userDefaults setObject:dic forKey:kFLUserInfo];
     }];

@@ -12,11 +12,14 @@ static NSString *cellId=@"TaskcellID";
 #import "GXSAddprojectViewController.h"
 #import "GXSAllCompanyViewController.h"
 
-@interface GXSTaskViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
+@interface GXSTaskViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) UIButton *nowTaskBtn;
 @property (nonatomic,strong) UIButton *historyTaskBtn;
 @property (nonatomic,strong) NSMutableArray *dataArray;
+@property (nonatomic,strong) NSString *status;
+@property (nonatomic,strong) NSString *keyword;
+@property (nonatomic,assign) NSInteger page;
 @end
 
 @implementation GXSTaskViewController
@@ -38,7 +41,10 @@ static NSString *cellId=@"TaskcellID";
     UIView *lineView=[[UIView alloc]initWithFrame:CGRectMake(100.f, 10.f, 1.f, 20.f)];
     lineView.backgroundColor=UIColor.grayColor;
     [btnView addSubview:lineView];
-    
+    self.status=@"1";
+    self.keyword=@"";
+    self.page=1;
+    self.dataArray=[NSMutableArray array];
     //当前任务
     UIButton *nowTaskBtn=[UIButton buttonWithFrame:CGRectMake(0.f, 0.f, 100.f, 40.f) image:nil title:@"当前任务" titleColor:UIColor.blackColor titleFont:[UIFont systemFontOfSize:20.f]];
     [nowTaskBtn addTarget:self action:@selector(nowTask:) forControlEvents:UIControlEventTouchUpInside];
@@ -73,6 +79,7 @@ static NSString *cellId=@"TaskcellID";
     addTaskBtn.bottom_mn=self.contentView.bottom_mn-100.f;
     [addTaskBtn addTarget:self action:@selector(addTask) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:addTaskBtn];
+    [self getDataInfo];
 }
 
 #pragma mark - event
@@ -81,16 +88,23 @@ static NSString *cellId=@"TaskcellID";
     GXSHTTPDataRequest *requst=[[GXSHTTPDataRequest alloc]init];
     requst.cachePolicy = MNURLDataCachePolicyNever;
     requst.method = MNURLHTTPMethodPost;
-    requst.url=URL_HANDING(@"/app/login/login");
-    requst.body=@{@"mobile":@""};
+    requst.url=URL_HANDING(@"/app/renwu/renwu_list");
+    requst.body=@{@"keyword":self.keyword,@"status":self.status,@"p":@(self.page)};
     @weakify(self);
     [requst loadData:^{
         @strongify(self);
         [self.view showActivityDialog:@"请稍后"];
     } completion:^(MNURLResponse * _Nonnull response) {
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
         if (response.code==MNURLResponseCodeSucceed) {
             [self.view closeDialog];
-           
+            if (self.page==1) {
+                [self.dataArray removeAllObjects];
+                [self.dataArray addObject:response.data[@"info"]];
+            }else{
+                [self.dataArray addObject:response.data[@"info"]];
+            }
         }else{
             [self.view showErrorDialog:response.message];
         }
@@ -99,16 +113,30 @@ static NSString *cellId=@"TaskcellID";
 
 - (void)nowTask:(UIButton *)btn{
     if (btn==self.nowTaskBtn) {
+        self.status=@"1";
         self.nowTaskBtn.titleLabel.font=[UIFont systemFontOfSize:18.f];
         [self.nowTaskBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
         self.historyTaskBtn.titleLabel.font=[UIFont systemFontOfSize:15.f];
         [self.historyTaskBtn setTitleColor:UIColor.grayColor forState:UIControlStateNormal];
+        [self getDataInfo];
     }else{
+        self.status=@"2";
         self.nowTaskBtn.titleLabel.font=[UIFont systemFontOfSize:15.f];
         [self.nowTaskBtn setTitleColor:UIColor.grayColor forState:UIControlStateNormal];
         self.historyTaskBtn.titleLabel.font=[UIFont systemFontOfSize:18.f];
         [self.historyTaskBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+        [self getDataInfo];
     }
+}
+
+- (void)headerReData{
+    self.page=1;
+    [self getDataInfo];
+}
+
+- (void)footerReData{
+    self.page++;
+    [self getDataInfo];
 }
 
 - (void)addTask{
@@ -119,18 +147,17 @@ static NSString *cellId=@"TaskcellID";
 #pragma mark - UISearchBarDelegate
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    
+    [self getDataInfo];
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
-    
+    self.keyword=searchBar.text;
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return self.dataArray.count;
-    return 10;
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -154,18 +181,33 @@ static NSString *cellId=@"TaskcellID";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 134.5f;
 }
+#pragma mark -DZNEmptyDataSetSource,DZNEmptyDataSetDelegate
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView{
+    return  [UIImage imageNamed:@"HX_emptyImage"];
+}
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView{
+    NSString *title=@"暂无数据";
+    NSDictionary *string=@{NSFontAttributeName:[UIFont boldSystemFontOfSize:14.f],NSForegroundColorAttributeName: MN_R_G_B(214, 214, 214)};
+    return  [[NSAttributedString alloc]initWithString:title attributes:string];
+}
 
 
 #pragma mark - getter and setter
+
 
 -(UITableView *)tableView{
     if (!_tableView) {
         _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0.f, 170.f, MN_SCREEN_WIDTH, self.contentView.bottom_mn-170.f) style:UITableViewStylePlain];
         _tableView.delegate               =self;
         _tableView.dataSource             =self;
-        _tableView.tableFooterView        = [[UIView alloc]init];
+        _tableView.emptyDataSetSource     =self;
+        _tableView.emptyDataSetDelegate   =self;
         _tableView.separatorStyle         =UITableViewCellSeparatorStyleNone;
+        _tableView.mj_header              =[MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerReData)];
+        _tableView.mj_footer              =[MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerReData)];
         [_tableView registerClass:[GXSTaskTableViewCell class] forCellReuseIdentifier:cellId];
+        
     }
     return  _tableView;
 }
@@ -188,6 +230,7 @@ static NSString *cellId=@"TaskcellID";
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
+
 
 - (CGRect)emptyViewFrame {
     return UIEdgeInsetsInsetRect(self.view.bounds, UIEdgeInsetsMake(self.view.top_mn, 0.f, 0.f, 0.f));

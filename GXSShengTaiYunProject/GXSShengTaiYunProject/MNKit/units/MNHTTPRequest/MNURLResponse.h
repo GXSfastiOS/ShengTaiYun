@@ -11,8 +11,8 @@
 
 typedef NS_ENUM(NSInteger, MNURLResponseCode) {
     MNURLResponseCodeUnknown = -1,
-    MNURLResponseCodeFailed = 0,
-    MNURLResponseCodeSucceed = 1,
+    MNURLResponseCodeFailed = 1,
+    MNURLResponseCodeSucceed = 0,
     MNURLResponseCodeDataEmpty = 2,
     MNURLResponseCodeTaskError = 3,
     MNURLResponseCodeCancelled = -999,

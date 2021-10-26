@@ -4154,7 +4154,10 @@
 					"$(PROJECT_DIR)/GXSShengTaiYunProject/MNKit/vendor/MNAudioConvert/VoiceConvert/lib",
 					"$(PROJECT_DIR)/GXSShengTaiYunProject/Vender/BaiduMap",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GXSShengTaiYun.GXSShengTaiYunProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -4198,7 +4201,10 @@
 					"$(PROJECT_DIR)/GXSShengTaiYunProject/MNKit/vendor/MNAudioConvert/VoiceConvert/lib",
 					"$(PROJECT_DIR)/GXSShengTaiYunProject/Vender/BaiduMap",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GXSShengTaiYun.GXSShengTaiYunProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

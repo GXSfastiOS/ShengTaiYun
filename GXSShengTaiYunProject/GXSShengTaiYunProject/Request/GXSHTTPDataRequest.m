@@ -55,7 +55,7 @@
 //        [headerFields setObject:ASIdentifierManager.sharedManager.advertisingIdentifier.UUIDString forKey:@"idfa"];
 //    }
     if (GXSUser.shareInfo.isLogin) {
-        [headerFields setObject:[[GXSUser shareInfo] uid] forKey:@"uid"];
+        [headerFields setObject:[[GXSUser shareInfo] uid] forKey:@"member_id"];
         [headerFields setObject:[[GXSUser shareInfo] token] forKey:@"token"];
         NSLog(@"-------------------当前登录账号-------------------\nuid: %@\ntoken: %@\n", [[GXSUser shareInfo] uid], [[GXSUser shareInfo] token]);
     } else {

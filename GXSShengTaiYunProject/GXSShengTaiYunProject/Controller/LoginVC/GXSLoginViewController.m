@@ -261,8 +261,9 @@
         @strongify(self);
         [self.view showActivityDialog:@"请稍后"];
     } completion:^(MNURLResponse * _Nonnull response) {
-        if (response.code==MNURLResponseCodeSucceed) {
+        if (response.code==0) {
             [self.view closeDialog];
+            [[GXSUser shareInfo] updateUserInfo:[response.data objectForKey:@"info"] writeToFile:NO];
         }else{
             [self.view showErrorDialog:response.message];
         }

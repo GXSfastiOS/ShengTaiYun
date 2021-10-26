@@ -9,8 +9,6 @@
 
 @interface  GXSAddTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;
-@property (weak, nonatomic) IBOutlet UITextField *detailText;
-
 @end
 
 @implementation GXSAddTableViewCell
