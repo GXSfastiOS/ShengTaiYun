@@ -48,6 +48,7 @@ static NSString * cellIdentifier=@"KHtableCellIdentfier";
     [footerView addSubview:rLab];
     self.tableView.tableFooterView=footerView;
 //    self.tableView.rowHeight = 50.f;
+    [self getData];
 
 }
 
@@ -56,7 +57,7 @@ static NSString * cellIdentifier=@"KHtableCellIdentfier";
     requst.cachePolicy = MNURLDataCachePolicyNever;
     requst.method = MNURLHTTPMethodPost;
     requst.url=URL_HANDING(@"/app/qiandao/qiandao_kaoping");
-    requst.body=@{@"type":@"1",@"member_id":@"10000",@"token":@"777777"};
+    requst.body=@{@"type":@(self.cid),@"member_id":@"10000",@"token":@"777777"};
     @weakify(self);
     [requst loadData:^{
         @strongify(self);
@@ -65,6 +66,7 @@ static NSString * cellIdentifier=@"KHtableCellIdentfier";
         if (response.code==MNURLResponseCodeSucceed) {
             [self.view closeDialog];
             self.datailDic=response.data[@"info"];
+            [self.tableView reloadData];
         }else{
             [self.view showErrorDialog:response.message];
         }
@@ -91,7 +93,18 @@ static NSString * cellIdentifier=@"KHtableCellIdentfier";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     cell.textLabel.text=self.titleArray[indexPath.row];
-    cell.detailTextLabel.text=@"A";
+    if (indexPath.row==0) {
+        cell.detailTextLabel.text=self.datailDic[@"wangge_name"];
+    }else if(indexPath.row==1){
+        cell.detailTextLabel.text=self.datailDic[@"name"];
+    }else if(indexPath.row==2){
+        cell.detailTextLabel.text=self.datailDic[@"lingdao_name"];
+    }else if(indexPath.row==3){
+        cell.detailTextLabel.text=[NSString stringWithFormat:@"%@",self.datailDic[@"qiandao_num"]];
+    }else if(indexPath.row==4){
+        cell.detailTextLabel.text=[NSString stringWithFormat:@"%@",self.datailDic[@"daka_num"]];
+    }
+    
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
 

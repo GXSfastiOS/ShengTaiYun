@@ -140,8 +140,10 @@ static NSString *cellId=@"TaskcellID";
 }
 
 - (void)addTask{
-    GXSAddprojectViewController *add=[[GXSAddprojectViewController alloc]init];
-    [self.navigationController pushViewController:add animated:YES];
+//    GXSAddprojectViewController *add=[[GXSAddprojectViewController alloc]init];
+//    [self.navigationController pushViewController:add animated:YES];
+    GXSAllCompanyViewController *all=[[GXSAllCompanyViewController alloc]init];
+    [self.navigationController pushViewController:all animated:YES];
 }
 
 #pragma mark - UISearchBarDelegate

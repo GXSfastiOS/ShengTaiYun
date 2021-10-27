@@ -136,7 +136,7 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
         GXSMySignViewController *sign=[[GXSMySignViewController  alloc]init];
         [self.navigationController pushViewController:sign animated:YES];
     }else if(indexPath.row==1){
-        GXSLoginViewController *login=[[GXSLoginViewController  alloc]init];
+        GXSMyKaopingViewController *login=[[GXSMyKaopingViewController  alloc]init];
         [self.navigationController pushViewController:login animated:YES];
     }else if(indexPath.row==3){
         GXSUSInfoViewController *us=[[GXSUSInfoViewController alloc]init];

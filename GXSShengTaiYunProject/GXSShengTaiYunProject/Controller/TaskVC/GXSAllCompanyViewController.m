@@ -41,6 +41,28 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
     self.tableView.frame=self.contentView.frame;
     self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
+    [self getData];
+}
+
+- (void)getData{
+    GXSHTTPDataRequest *requst=[[GXSHTTPDataRequest alloc]init];
+    requst.cachePolicy = MNURLDataCachePolicyNever;
+    requst.method = MNURLHTTPMethodPost;
+    requst.url=URL_HANDING(@"/app/qiye/qiye_list");
+    requst.body=@{@"keyword":@"",@"member_id":@"10000",@"token":@"777777"};
+    @weakify(self);
+    [requst loadData:^{
+        @strongify(self);
+        [self.view showActivityDialog:@"请稍后"];
+    } completion:^(MNURLResponse * _Nonnull response) {
+        if (response.code==MNURLResponseCodeSucceed) {
+            [self.view closeDialog];
+            self.dataArray=response.data[@"info"];
+            [self.tableView reloadData];
+        }else{
+            [self.view showErrorDialog:response.message];
+        }
+    }];
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
