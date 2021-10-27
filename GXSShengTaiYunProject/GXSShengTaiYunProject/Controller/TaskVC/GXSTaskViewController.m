@@ -101,9 +101,9 @@ static NSString *cellId=@"TaskcellID";
             [self.view closeDialog];
             if (self.page==1) {
                 [self.dataArray removeAllObjects];
-                [self.dataArray addObject:response.data[@"info"]];
+                [self.dataArray addObjectsFromArray:response.data[@"info"]];
             }else{
-                [self.dataArray addObject:response.data[@"info"]];
+                [self.dataArray addObjectsFromArray:response.data[@"info"]];
             }
         }else{
             [self.view showErrorDialog:response.message];

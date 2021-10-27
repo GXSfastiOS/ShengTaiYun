@@ -48,7 +48,7 @@
 }
 
 - (UIViewController *)segmentController:(MNSegmentController *)segmentController childControllerOfPageIndex:(NSUInteger)pageIndex {
-    GXSKaoheListViewController *vc = [[GXSKaoheListViewController alloc] initWithFrame:segmentController.view.bounds cid:1];
+    GXSKaoheListViewController *vc = [[GXSKaoheListViewController alloc] initWithFrame:segmentController.view.bounds cid:pageIndex];
     return vc;
 }
 

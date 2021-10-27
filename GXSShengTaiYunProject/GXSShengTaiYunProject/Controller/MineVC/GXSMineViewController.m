@@ -14,6 +14,7 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
 #import "GXSUSInfoViewController.h"
 #import "GXSMyKaopingViewController.h"
 #import "GXSHechaViewController.h"
+#import "GXSMySignViewController.h"
 
 @interface GXSMineViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -132,15 +133,8 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row==0) {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"清理缓存" message:@"确定清理缓存吗？" preferredStyle:UIAlertControllerStyleAlert];
-            
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [self cleanCache];
-            }];
-        [alertController addAction:cancelAction];
-        [alertController addAction:okAction];
-        [self presentViewController:alertController animated:YES completion:nil];
+        GXSMySignViewController *sign=[[GXSMySignViewController  alloc]init];
+        [self.navigationController pushViewController:sign animated:YES];
     }else if(indexPath.row==1){
         GXSLoginViewController *login=[[GXSLoginViewController  alloc]init];
         [self.navigationController pushViewController:login animated:YES];
@@ -150,6 +144,16 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
     }else if(indexPath.row==2){
         GXSHechaViewController *kaohe=[[GXSHechaViewController  alloc]init];
         [self.navigationController pushViewController:kaohe animated:YES];
+    }else if(indexPath.row==4){
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"清理缓存" message:[NSString stringWithFormat:@"确定清理%@缓存吗?",self.cacheStr] preferredStyle:UIAlertControllerStyleAlert];
+            
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self cleanCache];
+            }];
+        [alertController addAction:cancelAction];
+        [alertController addAction:okAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     }else{
         
     }

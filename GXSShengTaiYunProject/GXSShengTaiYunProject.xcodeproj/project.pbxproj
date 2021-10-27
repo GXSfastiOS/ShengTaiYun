@@ -422,6 +422,11 @@
 		1C3EC16227016597000C8845 /* GXSTabBarViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C3EC16127016597000C8845 /* GXSTabBarViewController.mm */; };
 		1C42AC1C27152E040062F680 /* GXSAllCompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C42AC1B27152E040062F680 /* GXSAllCompanyViewController.m */; };
 		1C76DB5F27117E7500F9B3EB /* GXSDanganViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C76DB5D27117E7500F9B3EB /* GXSDanganViewController.m */; };
+		1CC00DC52728FEEE0014F750 /* GXSGGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC00DC42728FEEE0014F750 /* GXSGGDetailViewController.m */; };
+		1CC00DC8272926E40014F750 /* GXSMySignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC00DC7272926E40014F750 /* GXSMySignViewController.m */; };
+		1CC00DCC27292DB20014F750 /* GXSSignCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC00DCA27292DB20014F750 /* GXSSignCollectionViewCell.m */; };
+		1CC00DCD27292DB20014F750 /* GXSSignCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CC00DCB27292DB20014F750 /* GXSSignCollectionViewCell.xib */; };
+		1CC00DD02729390D0014F750 /* MineSignModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC00DCF2729390D0014F750 /* MineSignModel.m */; };
 		1CD9C4252701C97300E418E1 /* GXSHTTPDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C4232701C97300E418E1 /* GXSHTTPDataRequest.m */; };
 		1CD9C42C2701C99700E418E1 /* GXSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C4282701C99600E418E1 /* GXSConfiguration.m */; };
 		1CD9C42E2701C99700E418E1 /* GXSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C42A2701C99600E418E1 /* GXSUser.m */; };
@@ -1265,6 +1270,15 @@
 		1C42AC1B27152E040062F680 /* GXSAllCompanyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSAllCompanyViewController.m; sourceTree = "<group>"; };
 		1C76DB5D27117E7500F9B3EB /* GXSDanganViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXSDanganViewController.m; sourceTree = "<group>"; };
 		1C76DB5E27117E7500F9B3EB /* GXSDanganViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSDanganViewController.h; sourceTree = "<group>"; };
+		1CC00DC32728FEEE0014F750 /* GXSGGDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSGGDetailViewController.h; sourceTree = "<group>"; };
+		1CC00DC42728FEEE0014F750 /* GXSGGDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSGGDetailViewController.m; sourceTree = "<group>"; };
+		1CC00DC6272926E40014F750 /* GXSMySignViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSMySignViewController.h; sourceTree = "<group>"; };
+		1CC00DC7272926E40014F750 /* GXSMySignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSMySignViewController.m; sourceTree = "<group>"; };
+		1CC00DC927292DB20014F750 /* GXSSignCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSSignCollectionViewCell.h; sourceTree = "<group>"; };
+		1CC00DCA27292DB20014F750 /* GXSSignCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSSignCollectionViewCell.m; sourceTree = "<group>"; };
+		1CC00DCB27292DB20014F750 /* GXSSignCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GXSSignCollectionViewCell.xib; sourceTree = "<group>"; };
+		1CC00DCE2729390D0014F750 /* MineSignModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineSignModel.h; sourceTree = "<group>"; };
+		1CC00DCF2729390D0014F750 /* MineSignModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineSignModel.m; sourceTree = "<group>"; };
 		1CD9C4232701C97300E418E1 /* GXSHTTPDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXSHTTPDataRequest.m; sourceTree = "<group>"; };
 		1CD9C4242701C97300E418E1 /* GXSHTTPDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSHTTPDataRequest.h; sourceTree = "<group>"; };
 		1CD9C4272701C99600E418E1 /* GXSConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSConfiguration.h; sourceTree = "<group>"; };
@@ -1468,6 +1482,8 @@
 				08B39CBD2703581E00EF9482 /* GXSGongGaoModel.m */,
 				1C0B82D9270FF7AC0029EDF6 /* GXSNewprojectModel.h */,
 				1C0B82DA270FF7AC0029EDF6 /* GXSNewprojectModel.m */,
+				1CC00DCE2729390D0014F750 /* MineSignModel.h */,
+				1CC00DCF2729390D0014F750 /* MineSignModel.m */,
 			);
 			path = HomeModel;
 			sourceTree = "<group>";
@@ -1626,6 +1642,8 @@
 				1CE241262713D1B5003EB6D9 /* GXSKaoheListViewController.m */,
 				1CE2412B271412C7003EB6D9 /* GXSHechaViewController.h */,
 				1CE2412C271412C7003EB6D9 /* GXSHechaViewController.m */,
+				1CC00DC6272926E40014F750 /* GXSMySignViewController.h */,
+				1CC00DC7272926E40014F750 /* GXSMySignViewController.m */,
 			);
 			path = MineVC;
 			sourceTree = "<group>";
@@ -1658,6 +1676,8 @@
 				1C76DB5D27117E7500F9B3EB /* GXSDanganViewController.m */,
 				1CE2412E27141A2F003EB6D9 /* GXSShengTaiHeChaViewController.h */,
 				1CE2412F27141A2F003EB6D9 /* GXSShengTaiHeChaViewController.m */,
+				1CC00DC32728FEEE0014F750 /* GXSGGDetailViewController.h */,
+				1CC00DC42728FEEE0014F750 /* GXSGGDetailViewController.m */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -3347,6 +3367,9 @@
 				1C1A66142703331100E20892 /* GXSGonggaoTableViewCell.m */,
 				1CF12EE82704506F00048BCA /* GXSShaixuanAlertView.h */,
 				1CF12EE92704506F00048BCA /* GXSShaixuanAlertView.m */,
+				1CC00DC927292DB20014F750 /* GXSSignCollectionViewCell.h */,
+				1CC00DCA27292DB20014F750 /* GXSSignCollectionViewCell.m */,
+				1CC00DCB27292DB20014F750 /* GXSSignCollectionViewCell.xib */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -3515,6 +3538,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CC00DCD27292DB20014F750 /* GXSSignCollectionViewCell.xib in Resources */,
 				1C0AA019270063A500B7F49C /* MNCityPicker.plist in Resources */,
 				1CF5E52C271E60C7001FBAA1 /* mapapi.bundle in Resources */,
 				1C0A9BC927005FFE00B7F49C /* LaunchScreen.storyboard in Resources */,
@@ -3764,6 +3788,7 @@
 				1C0AA01C270063A500B7F49C /* MNCollectionViewCell.m in Sources */,
 				1C0AA00F270063A500B7F49C /* MNAlbumView.m in Sources */,
 				1C0431D72711401B000810B0 /* TAProfileSelectModel.m in Sources */,
+				1CC00DC52728FEEE0014F750 /* GXSGGDetailViewController.m in Sources */,
 				1C0AA04A270063A500B7F49C /* CALayer+MNAnimation.m in Sources */,
 				1C0AA09D270063A500B7F49C /* UIView+MJExtension.m in Sources */,
 				1C0A9FE4270063A500B7F49C /* MNLogModel.m in Sources */,
@@ -3892,6 +3917,7 @@
 				1CD9C4312701CD6E00E418E1 /* FLExtern.m in Sources */,
 				1C0A9FD5270063A500B7F49C /* MNSwitch.m in Sources */,
 				1C0AA02B270063A500B7F49C /* UIResponder+MNHelper.m in Sources */,
+				1CC00DD02729390D0014F750 /* MineSignModel.m in Sources */,
 				1C0A9F6C270063A400B7F49C /* MNKVStorage.m in Sources */,
 				1C0AA04C270063A500B7F49C /* NSMutableDictionary+MNSafely.m in Sources */,
 				1C0A9FE5270063A500B7F49C /* MNLoger.m in Sources */,
@@ -3913,8 +3939,10 @@
 				1C0AA058270063A500B7F49C /* NSDictionary+MNAnalytic.m in Sources */,
 				1C0A9FAD270063A500B7F49C /* MNEmojiPacket.m in Sources */,
 				1C0AA0A5270063A500B7F49C /* MJRefreshStateHeader.m in Sources */,
+				1CC00DCC27292DB20014F750 /* GXSSignCollectionViewCell.m in Sources */,
 				1C0A9FE6270063A500B7F49C /* MNDebugButton.m in Sources */,
 				1C0A9FBD270063A500B7F49C /* MNRecordView.m in Sources */,
+				1CC00DC8272926E40014F750 /* GXSMySignViewController.m in Sources */,
 				1C0AA015270063A500B7F49C /* MNVideoKeyfram.m in Sources */,
 				1C0A9FB0270063A500B7F49C /* NSAttributedString+MNEmojiHelper.m in Sources */,
 				1C0AA03A270063A500B7F49C /* UIImage+MNAttributed.m in Sources */,

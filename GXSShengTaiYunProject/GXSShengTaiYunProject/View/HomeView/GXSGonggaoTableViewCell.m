@@ -55,7 +55,7 @@
     image.image=[UIImage imageNamed:@"icon_arrow_right_a"];
     [view addSubview:image];
     
-    UILabel *gongGaoTime=[UILabel labelWithFrame:CGRectMake(0.f, view.bottom_mn+10.f, 100.f, 20.f) text:@"12:00" alignment:NSTextAlignmentCenter textColor:UIColor.grayColor font:UIFontSystem(16)];
+    UILabel *gongGaoTime=[UILabel labelWithFrame:CGRectMake(0.f, view.bottom_mn+10.f, 150.f, 20.f) text:@"12:00" alignment:NSTextAlignmentCenter textColor:UIColor.grayColor font:UIFontSystem(16)];
     gongGaoTime.centerX_mn=view.centerX_mn;
     [view addSubview:gongGaoTime];
     self.gongGaoTime=gongGaoTime;
@@ -63,7 +63,9 @@
 }
 
 - (void)setModel:(GXSGongGaoModel *)model{
-    
+    self.gongGaoTitle.text=model.title;
+    self.gongGaoMore.text=model.jianjie;
+    self.gongGaoTime.text=[NSDate dateStringWithTimestamp:model.add_time format:@"yyyy-MM-DD HH:mm"];
 }
 
 @end

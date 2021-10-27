@@ -12,6 +12,8 @@ static NSString * cellIdentifier=@"KHtableCellIdentfier";
 @interface GXSKaoheListViewController ()<MNSegmentSubpageDataSource>
 //titleArray
 @property (nonatomic,strong)NSArray *titleArray;
+//titleArray
+@property (nonatomic,strong)NSDictionary *datailDic;
 //cid
 @property (nonatomic,assign)NSInteger cid;
 @end
@@ -47,6 +49,26 @@ static NSString * cellIdentifier=@"KHtableCellIdentfier";
     self.tableView.tableFooterView=footerView;
 //    self.tableView.rowHeight = 50.f;
 
+}
+
+- (void)getData{
+    GXSHTTPDataRequest *requst=[[GXSHTTPDataRequest alloc]init];
+    requst.cachePolicy = MNURLDataCachePolicyNever;
+    requst.method = MNURLHTTPMethodPost;
+    requst.url=URL_HANDING(@"/app/qiandao/qiandao_kaoping");
+    requst.body=@{@"type":@"1",@"member_id":@"10000",@"token":@"777777"};
+    @weakify(self);
+    [requst loadData:^{
+        @strongify(self);
+        [self.view showActivityDialog:@"请稍后"];
+    } completion:^(MNURLResponse * _Nonnull response) {
+        if (response.code==MNURLResponseCodeSucceed) {
+            [self.view closeDialog];
+            self.datailDic=response.data[@"info"];
+        }else{
+            [self.view showErrorDialog:response.message];
+        }
+    }];
 }
 
 
