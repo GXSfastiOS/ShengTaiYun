@@ -5,10 +5,11 @@
 //  Created by fenglikejiInfomation on 2021/10/8.
 //
 
-static NSString * cellIdentifier=@"tableCellIdentfier";
+static NSString * cellIdentifier=@"GXSNewAddInfoTableViewCellIdentfier";
 
 #import "GXSNewProjectViewController.h"
 #import "GXSNewprojectModel.h"
+#import "GXSNewAddInfoTableViewCell.h"
 
 @interface GXSNewProjectViewController ()
 @property (nonatomic,strong)NSMutableArray *dataArray;
@@ -28,7 +29,7 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
     self.title=@"新建企业信息";
     self.tableView.frame=self.contentView.frame;
     self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
-//    [self.tableView registerClass:[GXSGonggaoTableViewCell class] forCellReuseIdentifier:cellID];
+    [self.tableView registerClass:[GXSNewAddInfoTableViewCell class] forCellReuseIdentifier:cellIdentifier];
     [self.view addSubview:self.tableView];
     
     UIView *footerView=[[UIView alloc]initWithFrame:CGRectMake(0.f, 0.f, self.tableView.width_mn, 80.f)];
@@ -86,7 +87,7 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+    GXSNewAddInfoTableViewCell *cell=[[GXSNewAddInfoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier Title:@"产品"];
     cell.backgroundColor=GXS_THEME_COLOR;
     return  cell;
 }
@@ -103,7 +104,7 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50.f;
+    return 200.f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{

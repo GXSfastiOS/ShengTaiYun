@@ -109,8 +109,6 @@ static NSString * cellIdentifier=@"tableCellIdentfier";
     return 80.f;
 }
 
-
-
 #pragma mark -super
 
 - (MNContentEdges)contentEdges{

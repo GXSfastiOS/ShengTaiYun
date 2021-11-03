@@ -18,6 +18,8 @@
 #import "YYModel.h"
 #import "UIImageView+WebCache.h"
 #import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+#import "ListCellTypeModel.h"
+#import "GXSAddTableViewCell.h"
 // 引入base相关所有的头文件
 //#import <BaiduMapAPI_Base/BMKBaseComponent.h>
 

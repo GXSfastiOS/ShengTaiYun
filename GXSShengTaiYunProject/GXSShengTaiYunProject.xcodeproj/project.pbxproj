@@ -17,6 +17,8 @@
 		08B39CF62712BB6100EF9482 /* GXSUSInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B39CF52712BB6100EF9482 /* GXSUSInfoViewController.m */; };
 		1C0431D427113FB3000810B0 /* TAProfileSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0431D227113FB3000810B0 /* TAProfileSelectCell.m */; };
 		1C0431D72711401B000810B0 /* TAProfileSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0431D52711401B000810B0 /* TAProfileSelectModel.m */; };
+		1C082C9827312B6E002EAE34 /* GXSNewAddInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C082C9727312B6E002EAE34 /* GXSNewAddInfoTableViewCell.m */; };
+		1C082C9B27313D50002EAE34 /* FMPrejectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C082C9927313D50002EAE34 /* FMPrejectView.m */; };
 		1C0A9BBB27005FFB00B7F49C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A9BBA27005FFB00B7F49C /* AppDelegate.m */; };
 		1C0A9BC427005FFB00B7F49C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A9BC227005FFB00B7F49C /* Main.storyboard */; };
 		1C0A9BC627005FFE00B7F49C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A9BC527005FFE00B7F49C /* Assets.xcassets */; };
@@ -419,6 +421,7 @@
 		1C1A661127032FDA00E20892 /* GXSGonggaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A661027032FDA00E20892 /* GXSGonggaoViewController.m */; };
 		1C1A66152703331100E20892 /* GXSGonggaoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A66142703331100E20892 /* GXSGonggaoTableViewCell.m */; };
 		1C1E02D9270401F9000244F4 /* GXSAllHuanJingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1E02D8270401F9000244F4 /* GXSAllHuanJingViewController.m */; };
+		1C29454B27327A880096D67D /* GXSAllProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C29454A27327A880096D67D /* GXSAllProjectModel.m */; };
 		1C3EC16227016597000C8845 /* GXSTabBarViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C3EC16127016597000C8845 /* GXSTabBarViewController.mm */; };
 		1C42AC1C27152E040062F680 /* GXSAllCompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C42AC1B27152E040062F680 /* GXSAllCompanyViewController.m */; };
 		1C76DB5F27117E7500F9B3EB /* GXSDanganViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C76DB5D27117E7500F9B3EB /* GXSDanganViewController.m */; };
@@ -496,6 +499,10 @@
 		1C0431D327113FB3000810B0 /* TAProfileSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAProfileSelectCell.h; sourceTree = "<group>"; };
 		1C0431D52711401B000810B0 /* TAProfileSelectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAProfileSelectModel.m; sourceTree = "<group>"; };
 		1C0431D62711401B000810B0 /* TAProfileSelectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAProfileSelectModel.h; sourceTree = "<group>"; };
+		1C082C9627312B6E002EAE34 /* GXSNewAddInfoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSNewAddInfoTableViewCell.h; sourceTree = "<group>"; };
+		1C082C9727312B6E002EAE34 /* GXSNewAddInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSNewAddInfoTableViewCell.m; sourceTree = "<group>"; };
+		1C082C9927313D50002EAE34 /* FMPrejectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMPrejectView.m; sourceTree = "<group>"; };
+		1C082C9A27313D50002EAE34 /* FMPrejectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPrejectView.h; sourceTree = "<group>"; };
 		1C0A9BB627005FFB00B7F49C /* GXSShengTaiYunProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GXSShengTaiYunProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C0A9BB927005FFB00B7F49C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1C0A9BBA27005FFB00B7F49C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1264,6 +1271,8 @@
 		1C1A66142703331100E20892 /* GXSGonggaoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSGonggaoTableViewCell.m; sourceTree = "<group>"; };
 		1C1E02D7270401F9000244F4 /* GXSAllHuanJingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSAllHuanJingViewController.h; sourceTree = "<group>"; };
 		1C1E02D8270401F9000244F4 /* GXSAllHuanJingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSAllHuanJingViewController.m; sourceTree = "<group>"; };
+		1C29454927327A880096D67D /* GXSAllProjectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSAllProjectModel.h; sourceTree = "<group>"; };
+		1C29454A27327A880096D67D /* GXSAllProjectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXSAllProjectModel.m; sourceTree = "<group>"; };
 		1C3EC16027016597000C8845 /* GXSTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSTabBarViewController.h; sourceTree = "<group>"; };
 		1C3EC16127016597000C8845 /* GXSTabBarViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GXSTabBarViewController.mm; sourceTree = "<group>"; };
 		1C42AC1A27152E040062F680 /* GXSAllCompanyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXSAllCompanyViewController.h; sourceTree = "<group>"; };
@@ -1484,6 +1493,8 @@
 				1C0B82DA270FF7AC0029EDF6 /* GXSNewprojectModel.m */,
 				1CC00DCE2729390D0014F750 /* MineSignModel.h */,
 				1CC00DCF2729390D0014F750 /* MineSignModel.m */,
+				1C29454927327A880096D67D /* GXSAllProjectModel.h */,
+				1C29454A27327A880096D67D /* GXSAllProjectModel.m */,
 			);
 			path = HomeModel;
 			sourceTree = "<group>";
@@ -3370,6 +3381,10 @@
 				1CC00DC927292DB20014F750 /* GXSSignCollectionViewCell.h */,
 				1CC00DCA27292DB20014F750 /* GXSSignCollectionViewCell.m */,
 				1CC00DCB27292DB20014F750 /* GXSSignCollectionViewCell.xib */,
+				1C082C9627312B6E002EAE34 /* GXSNewAddInfoTableViewCell.h */,
+				1C082C9727312B6E002EAE34 /* GXSNewAddInfoTableViewCell.m */,
+				1C082C9A27313D50002EAE34 /* FMPrejectView.h */,
+				1C082C9927313D50002EAE34 /* FMPrejectView.m */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -3630,6 +3645,7 @@
 				1C0AA039270063A500B7F49C /* UIViewController+MNHelper.m in Sources */,
 				1C0A9FB6270063A500B7F49C /* MNCollectionVerticalLayout.m in Sources */,
 				1C0A9F64270063A400B7F49C /* MNQRGenerator.m in Sources */,
+				1C082C9827312B6E002EAE34 /* GXSNewAddInfoTableViewCell.m in Sources */,
 				1CD9C42C2701C99700E418E1 /* GXSConfiguration.m in Sources */,
 				1C0AA09F270063A500B7F49C /* MJRefreshBackStateFooter.m in Sources */,
 				1C0AA030270063A500B7F49C /* UIView+MNHelper.m in Sources */,
@@ -3756,6 +3772,7 @@
 				1C0A9FF0270063A500B7F49C /* MNProgressDialog.m in Sources */,
 				1C0A9FC8270063A500B7F49C /* MNPortalTransitionAnimator.m in Sources */,
 				1C0A9FF5270063A500B7F49C /* MNLoadDialog.m in Sources */,
+				1C082C9B27313D50002EAE34 /* FMPrejectView.m in Sources */,
 				1C0AA0B2270063A500B7F49C /* MNAudioConvert.m in Sources */,
 				1C0B82DB270FF7AC0029EDF6 /* GXSNewprojectModel.m in Sources */,
 				1C0A9FDE270063A500B7F49C /* MNPageControl.m in Sources */,
@@ -3772,6 +3789,7 @@
 				1C0AA05E270063A500B7F49C /* NSString+MNCoding.m in Sources */,
 				1C0A9FF1270063A500B7F49C /* MNErrorDialog.m in Sources */,
 				1C0A9F72270063A500B7F49C /* NSDictionary+MNSQLStatement.m in Sources */,
+				1C29454B27327A880096D67D /* GXSAllProjectModel.m in Sources */,
 				1C0A9FC0270063A500B7F49C /* UIScrollView+MNLinkHelper.m in Sources */,
 				1C0AA021270063A500B7F49C /* MNSafeArray.m in Sources */,
 				1C0A9FAB270063A500B7F49C /* MNEmojiManager.m in Sources */,
