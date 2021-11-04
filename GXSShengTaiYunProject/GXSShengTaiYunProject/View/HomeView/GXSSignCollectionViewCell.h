@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GXSSignCollectionViewCell : MNCollectionViewCell
 @property (nonatomic,strong)MineSignModel *model;
+
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 @end
 
 NS_ASSUME_NONNULL_END

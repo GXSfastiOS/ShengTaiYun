@@ -25,10 +25,13 @@
 - (void)setModel:(MineSignModel *)model{
     if ([model.daka_name isEqualToString:@"点击此处添加文本"]) {
         self.dakeLab.text=[NSString stringWithFormat:@"打卡%@次",@"0"];
-        self.dakaAddress.text=model.daka_name;
-        self.dakaImg.image=[UIImage imageNamed:@"icon_defaultimg"];
+        self.dakaAddress.hidden=YES;
+        self.textField.hidden=NO;
+        self.dakaImg.image=model.daka_img?model.daka_img:[UIImage imageNamed:@"icon_defaultimg"];
     }else{
         self.dakeLab.text=[NSString stringWithFormat:@"打卡%@次",model.daka_id];
+        self.dakaAddress.hidden=NO;
+        self.textField.hidden=YES;
         self.dakaAddress.text=model.daka_name;
         [self.dakaImg sd_setImageWithURL:[NSURL URLWithString:model.daka_pic] placeholderImage:[UIImage imageNamed:@"bg"]];
     }

@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)NSString *daka_name;
 //打卡图
 @property (nonatomic,strong)NSString *daka_pic;
+//打卡图
+@property (nonatomic,strong)UIImage *daka_img;
 @end
 
 NS_ASSUME_NONNULL_END

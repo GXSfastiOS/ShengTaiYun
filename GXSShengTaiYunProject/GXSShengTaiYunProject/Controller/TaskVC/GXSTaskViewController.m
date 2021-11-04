@@ -140,10 +140,10 @@ static NSString *cellId=@"TaskcellID";
 }
 
 - (void)addTask{
-//    GXSAddprojectViewController *add=[[GXSAddprojectViewController alloc]init];
-//    [self.navigationController pushViewController:add animated:YES];
-    GXSAllCompanyViewController *all=[[GXSAllCompanyViewController alloc]init];
-    [self.navigationController pushViewController:all animated:YES];
+    GXSAddprojectViewController *add=[[GXSAddprojectViewController alloc]init];
+    [self.navigationController pushViewController:add animated:YES];
+//    GXSAllCompanyViewController *all=[[GXSAllCompanyViewController alloc]init];
+//    [self.navigationController pushViewController:all animated:YES];
 }
 
 #pragma mark - UISearchBarDelegate
@@ -207,7 +207,7 @@ static NSString *cellId=@"TaskcellID";
         _tableView.emptyDataSetDelegate   =self;
         _tableView.separatorStyle         =UITableViewCellSeparatorStyleNone;
         _tableView.mj_header              =[MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerReData)];
-        _tableView.mj_footer              =[MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerReData)];
+        _tableView.mj_footer              =[MJRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerReData)];
         [_tableView registerClass:[GXSTaskTableViewCell class] forCellReuseIdentifier:cellId];
         
     }

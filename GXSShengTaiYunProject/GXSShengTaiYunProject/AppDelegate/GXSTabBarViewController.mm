@@ -44,7 +44,7 @@ static GXSTabBarViewController *_tabBarController;
     [super viewDidLoad];
     
     MNTabBar *tabBar = self.tabView;
-    tabBar.itemSize = CGSizeMake(70.f, 46.f);
+    tabBar.itemSize = CGSizeMake(80.f, 46.f);
     [MNTabBarItem  appearance].titleFont=[UIFont systemFontOfSize:18.f];
     [MNTabBarItem  appearance].otherViewStyte=YES;
     [[MNTabBarItem appearance] setImage:nil];

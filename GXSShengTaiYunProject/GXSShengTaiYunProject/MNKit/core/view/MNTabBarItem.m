@@ -97,7 +97,7 @@
         
         titleRect = CGRectMake(0.f, (self.contentView.height_mn-_titleLabel.font.pointSize)/2, self.contentView.width_mn, self.titleFont.pointSize);
         
-        self.bottomView.frame=CGRectMake(0.f, titleRect.size.height+20,titleRect.size.width-34, 3);
+        self.bottomView.frame=CGRectMake(0.f, titleRect.size.height+20,titleRect.size.width-44, 3);
         self.bottomView.layer.cornerRadius=1.5;
         
         if (!UIEdgeInsetsEqualToEdgeInsets(self.imageEdgeInsets, UIEdgeInsetsZero)) {

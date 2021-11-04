@@ -180,15 +180,16 @@ static NSString *scellId=@"SelectCellID";
         picker.configuration.allowsEditing = NO;
         picker.configuration.maxExportPixel = 2000;
         picker.configuration.maxPickingCount = 10 - self.profiles.count;
-    } else {
-        picker.configuration.allowsEditing = YES;
-        picker.configuration.maxPickingCount = 1;
-        picker.configuration.allowsPickingVideo = YES;
-        picker.configuration.allowsPickingPhoto = NO;
-        picker.configuration.allowsResizeVideoSize = NO;
-        picker.configuration.minExportDuration = 3.f;
-        picker.configuration.maxExportDuration = 60.f;
     }
+//    } else {
+//        picker.configuration.allowsEditing = YES;
+//        picker.configuration.maxPickingCount = 1;
+//        picker.configuration.allowsPickingVideo = YES;
+//        picker.configuration.allowsPickingPhoto = NO;
+//        picker.configuration.allowsResizeVideoSize = NO;
+//        picker.configuration.minExportDuration = 3.f;
+//        picker.configuration.maxExportDuration = 60.f;
+//    }
     @weakify(self);
     [picker presentInController:self pickingHandler:^(MNAssetPicker * _Nonnull picker, NSArray<MNAsset *> * _Nullable assets) {
         [weakself insertProfiles:assets type:type];

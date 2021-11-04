@@ -11,17 +11,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gTV-IL-0wX" customClass="GXSSignCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="227" height="247"/>
+            <rect key="frame" x="0.0" y="0.0" width="227" height="279"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="227" height="247"/>
+                <rect key="frame" x="0.0" y="0.0" width="227" height="279"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j6E-vT-sFZ">
-                        <rect key="frame" x="15" y="54.5" width="197" height="162.5"/>
+                        <rect key="frame" x="15" y="54.5" width="197" height="184.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上海文化" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zu-Dh-6Hc">
-                        <rect key="frame" x="83" y="222" width="61.5" height="18"/>
+                        <rect key="frame" x="83" y="254" width="61.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -32,6 +32,11 @@
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请在此处输入文本" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fo6-Vk-7ua">
+                        <rect key="frame" x="56.5" y="253.5" width="114.5" height="18.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
             </view>
             <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -40,18 +45,21 @@
                 <constraint firstItem="6zu-Dh-6Hc" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="4k8-vW-U9K"/>
                 <constraint firstItem="erM-Hv-IEi" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="54y-QA-ULH"/>
                 <constraint firstAttribute="trailing" secondItem="j6E-vT-sFZ" secondAttribute="trailing" constant="15" id="87p-g2-JUN"/>
-                <constraint firstAttribute="bottom" secondItem="j6E-vT-sFZ" secondAttribute="bottom" constant="30" id="Cpd-1X-2p9"/>
+                <constraint firstAttribute="bottom" secondItem="j6E-vT-sFZ" secondAttribute="bottom" constant="40" id="Cpd-1X-2p9"/>
                 <constraint firstItem="j6E-vT-sFZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="JlH-CE-xxH"/>
                 <constraint firstItem="erM-Hv-IEi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="dbW-If-YZB"/>
                 <constraint firstAttribute="bottom" secondItem="6zu-Dh-6Hc" secondAttribute="bottom" constant="7" id="ekE-95-1W4"/>
+                <constraint firstItem="fo6-Vk-7ua" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="i1f-wH-hXh"/>
+                <constraint firstAttribute="bottom" secondItem="fo6-Vk-7ua" secondAttribute="bottom" constant="7" id="nB0-9N-iyW"/>
             </constraints>
-            <size key="customSize" width="227" height="247"/>
+            <size key="customSize" width="227" height="279"/>
             <connections>
                 <outlet property="dakaAddress" destination="6zu-Dh-6Hc" id="6cV-kp-706"/>
                 <outlet property="dakaImg" destination="j6E-vT-sFZ" id="cKW-KU-FYw"/>
                 <outlet property="dakeLab" destination="erM-Hv-IEi" id="SKh-Ra-0q3"/>
+                <outlet property="textField" destination="fo6-Vk-7ua" id="ogG-dx-3aB"/>
             </connections>
-            <point key="canvasLocation" x="103.62318840579711" y="123.54910714285714"/>
+            <point key="canvasLocation" x="103.62318840579711" y="134.26339285714286"/>
         </collectionViewCell>
     </objects>
     <resources>

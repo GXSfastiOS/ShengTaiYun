@@ -46,7 +46,7 @@
         doneButton.tag = 1;
         doneButton.layer.cornerRadius = 4.f;
         doneButton.clipsToBounds = YES;
-        [doneButton setBackgroundImage:[UIImage imageWithColor:MNAssetToolBarHighlightColor] forState:UIControlStateHighlighted];
+        [doneButton setBackgroundImage:[UIImage imageWithColor:MNAssetToolBarHighlightColor] forState:UIControlStateNormal];
         [doneButton setBackgroundImage:[UIImage imageWithColor:MNAssetToolBarDisabledColor] forState:UIControlStateDisabled];
         [doneButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:doneButton];
